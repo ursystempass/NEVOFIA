@@ -11,7 +11,7 @@ body {
     position: relative;
     text-align: center;
     width: 100%;
-    height: 700px; /* Disesuaikan agar proporsional */
+    height: 700px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -29,33 +29,24 @@ body {
 .hero h1 {
     position: absolute;
     top: 50%;
-    left: 50%; /* Posisi lebih ke tengah */
+    left: 50%;
     transform: translate(-50%, -50%);
     font-size: 5.3em;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    letter-spacing: 50px; /* Spasi antar huruf diperbesar */
+    letter-spacing: 50px;
     opacity: 0;
     filter: blur(5px);
     animation: fadeInText 1.5s ease-out forwards;
 }
 
-.hero h1 .about {
+.hero h1 span {
     display: block;
     color: white;
 }
 
-.hero h1 .us {
-    display: block;
-    color: rgb(211, 210, 210);
-    font-size: 2.0em; /* Sedikit lebih kecil */
-    margin-top: -10px; /* Geser lebih dekat ke ABOUT */
-    text-align: right; /* Sesuai gambar */
-}
-
-/* Animasi Fade In */
 @keyframes fadeInText {
     0% {
         opacity: 0;
@@ -69,26 +60,24 @@ body {
     }
 }
 
-
 .best-product {
     text-align: center;
     padding: 60px 20px;
-    opacity: 0; /* Mulai dengan transparan */
-    transform: translateY(50px); /* Geser sedikit ke bawah */
+    opacity: 0;
+    transform: translateY(50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .best-product.show {
-    opacity: 1; /* Muncul */
-    transform: translateY(0); /* Kembali ke posisi normal */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .best-product h2 {
     font-size: 2.5em;
     text-transform: uppercase;
-    margin-bottom: 40px; /* Tambahkan jarak lebih besar */
+    margin-bottom: 40px;
 }
-
 
 .product-list {
     display: flex;
@@ -102,8 +91,7 @@ body {
     align-items: center;
     text-align: center;
     width: 400px;
-    gap: 8px; /* Jarak antar elemen dalam product-item */
-
+    gap: 8px;
 }
 
 .product-item img {
@@ -115,45 +103,44 @@ body {
 }
 
 .product-item:hover img {
-    transform: scale(1.05); /* Efek timbul ringan */
+    transform: scale(1.05);
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .product-name {
-    margin-top: 5px; /* Jarak lebih pendek antara gambar dan teks */
-    font-size: 1.5em; /* Ukuran lebih kecil */
-    font-weight: normal; /* Tidak bold */
-    color: #444; /* Warna lebih soft */
-    text-transform: none; /* Tidak uppercase */
+    margin-top: 5px;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #444;
+    text-transform: none;
     letter-spacing: 0.5px;
     transition: color 0.3s ease-in-out;
 }
 
 .product-item:hover .product-name {
-    color: #b34560; /* Warna berubah saat hover */
+    color: #b34560;
 }
-
 
 .phyloshopy {
     display: flex;
-    align-items: flex-start; /* H3 lebih ke atas */
-    justify-content: flex-start; /* H3 lebih ke kiri */
-    padding-top: 50px; /* Geser ke atas */
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 50px;
 }
 
 .phyloshopy .text {
     width: 45%;
-    text-align: left; /* Rata kiri */
-    margin-left: -30px; /* Geser lebih ke kiri */
+    text-align: left;
+    margin-left: -30px;
 }
 
 .phyloshopy h3 {
-    font-size: 5.0em; /* Ukuran lebih besar */
-    font-weight: bold; /* Bold untuk penegasan */
+    font-size: 5.0em;
+    font-weight: bold;
     text-transform: none;
     line-height: 1.2;
-    text-align: left; /* Geser teks ke kiri */
-    margin-left: -200px; /* Pindahkan lebih ke kiri */
+    text-align: left;
+    margin-left: -200px;
 }
 
 .phyloshopy h3 span {
@@ -161,17 +148,17 @@ body {
 }
 
 .phyloshopy p {
-    font-size: 2em; /* Lebih besar */
+    font-size: 2em;
     font-style: italic;
-    text-align: right; /* Geser ke kanan */
-    margin-top: 100px; /* Lebih ke bawah */
-    margin-right: 10px; /* Geser lebih ke kanan */
+    text-align: right;
+    margin-top: 100px;
+    margin-right: 10px;
     position: relative;
 }
 
 .phyloshopy p::before, 
 .phyloshopy p::after {
-    content: "“"; /* Tanda kutip unik */
+    content: "“";
     font-size: 2.5em;
     font-weight: bold;
     color: #c2958b;
@@ -181,7 +168,7 @@ body {
     content: "”";
 }
 
-.phyloshopy img {
+.phyloshopy video {
     width: 50%;
     height: 1000px;
     object-fit: cover;
@@ -189,36 +176,60 @@ body {
 
 .mission {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 20px;
-    flex-direction: row-reverse; /* Gambar di kiri, teks di kanan */
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-top: 50px;
 }
 
 .mission .text {
     width: 45%;
-    text-align: left; /* Pastikan teks tetap rata kiri */
-    margin-left: 100px; /* Geser teks lebih ke kanan */
+    text-align: left;
+    margin-left: -30px;
 }
 
 .mission h3 {
-    font-size: 4em; /* Perbesar ukuran teks */
+    font-size: 5.0em;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: none;
     line-height: 1.2;
+    text-align: left;
+    margin-left: 300px; /* Sama seperti phyloshopy */
+    position: absolute;
+    color: rgb(0, 0, 0);
+}
+
+
+.mission h3 span {
+    display: block;
 }
 
 .mission p {
-    font-size: 1.5em;
+    font-size: 2em;
     font-style: italic;
-    margin-top: 20px;
-    text-align: left;
+    text-align: right;
+    margin-top: 100px;
+    margin-right: 10px;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+
+.mission p::before, 
+.mission p::after {
+    content: "“";
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #c2958b;
+}
+
+.mission p::after {
+    content: "”";
 }
 
 .mission img {
     width: 50%;
-    height: auto;
+    height: 1000px;
     object-fit: cover;
+    margin-left: 50px;
 }
 
 /* FOOTER */

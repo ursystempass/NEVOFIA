@@ -1,0 +1,21 @@
+{
+    "images": [
+      "lip 1.jpeg",
+      "model.jpeg",
+      "hoyeon.jpg",
+      "apple.jpeg",
+      "lip 2.jpeg",
+      "bottle.jpg"
+    ],
+    "products": [
+      { "img": "lip 1.jpeg", "name": "Blush On", "price": "Rp 45.000" },
+      { "img": "lip 2.jpeg", "name": "Lipstick", "price": "Rp 55.000" },
+      { "img": "bottle.jpg", "name": "Eyeliner", "price": "Rp 35.000" }
+    ],
+    "heroImages": [
+      "/project-folder/image/lip 2.jpeg",
+      "/project-folder/image/hoyeon.jpg",
+      "/project-folder/image/apple.jpeg"
+  ]
+  }
+  

@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const products = [
-        { name: "Lip Serum Laneige", price: 64000, discountPrice: 54000, variations: ["chocolate", "peach", "Sugar"] },
-        { name: "Dear Me Beauty", price: 56000, discountPrice: 48000, variations: ["rachel", "vania", "debby"] },
-        { name: "Clay stick Glad2Glow", price: 43000, discountPrice: 35000, variations: ["pink", "hijau", "abu"] },
-        { name: "Cream Blush Tavi", price: 66000, discountPrice: 55000, variations: ["love bites", "starburst"] },
-        { name: "Serum Sunscreen Skintific", price: 79000, discountPrice: 67000, variations: ["matte", "aqua"] },
-        { name: "Dazzle Me Loose Powder", price: 47000, discountPrice: 39000, variations: ["satu", "dua", "tiga"] }
+        { name: "Lip Serum Laneige", price: 64000, variations: ["chocolate", "peach", "Sugar"] },
+        { name: "Dear Me Beauty", price: 56000, variations: ["rachel", "vania", "debby"] },
+        { name: "Clay stick Glad2Glow", price: 43000, variations: ["pink", "hijau", "abu"] },
+        { name: "Cream Blush Tavi", price: 66000, variations: ["love bites", "starburst"] },
+        { name: "Serum Sunscreen Skintific", price: 79000, variations: ["matte", "aqua"] },
+        { name: "Dazzle Me Loose Powder", price: 47000, variations: ["satu", "dua", "tiga"] }
     ];
 
     const productContainer = document.querySelector(".product-list");
@@ -13,22 +13,19 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateTotal() {
         let totalQuantity = 0;
         let totalPrice = 0;
-        let totalDiscount = 0;
 
         document.querySelectorAll(".product").forEach((productElement, index) => {
             const quantityInput = productElement.querySelector("input[type='number']");
             const isChecked = productElement.querySelector("input[type='checkbox']").checked;
             if (isChecked) {
-                let quantity = parseInt(quantityInput.value);
+                let quantity = parseInt(quantityInput.value, 10);
                 totalQuantity += quantity;
-                totalPrice += quantity * products[index].discountPrice;
-                totalDiscount += quantity * (products[index].price - products[index].discountPrice);
+                totalPrice += quantity * products[index].price; // Koreksi: Hitung harga total berdasarkan index produk
             }
         });
 
         document.getElementById("totalQuantity").textContent = totalQuantity;
-        document.getElementById("totalPrice").textContent = totalPrice.toLocaleString();
-        document.getElementById("totalDiscount").textContent = totalDiscount.toLocaleString();
+        document.getElementById("totalPrice").textContent = `Rp${totalPrice.toLocaleString()}`;
     }
 
     products.forEach((product, index) => {
@@ -57,12 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         originalPrice.classList.add("original-price");
         originalPrice.textContent = `Rp${product.price.toLocaleString()}`;
 
-        const discountedPrice = document.createElement("span");
-        discountedPrice.classList.add("discounted-price");
-        discountedPrice.textContent = `Rp${product.discountPrice.toLocaleString()}`;
-
         priceContainer.appendChild(originalPrice);
-        priceContainer.appendChild(discountedPrice);
 
         const variationSelect = document.createElement("select");
         variationSelect.classList.add("variation-select");
@@ -79,27 +71,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const minusButton = document.createElement("button");
         minusButton.textContent = "-";
+
         const quantityInput = document.createElement("input");
         quantityInput.type = "number";
         quantityInput.value = 1;
         quantityInput.min = 1;
+        quantityInput.setAttribute("step", "1");
 
         const plusButton = document.createElement("button");
         plusButton.textContent = "+";
 
         minusButton.onclick = () => {
             if (quantityInput.value > 1) {
-                quantityInput.value = parseInt(quantityInput.value) - 1;
+                quantityInput.value = parseInt(quantityInput.value, 10) - 1;
                 updateTotal();
             }
         };
 
         plusButton.onclick = () => {
-            quantityInput.value = parseInt(quantityInput.value) + 1;
+            quantityInput.value = parseInt(quantityInput.value, 10) + 1;
             updateTotal();
         };
-
-        quantityInput.addEventListener("input", updateTotal);
 
         quantityContainer.appendChild(minusButton);
         quantityContainer.appendChild(quantityInput);

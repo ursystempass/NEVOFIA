@@ -142,106 +142,63 @@
         
     </main>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            console.log("Script berjalan!"); // Debugging: memastikan script berjalan
-        
-            document.querySelectorAll(".product").forEach(product => {
-                const minusButton = product.querySelector(".minus");
-                const quantityInput = product.querySelector("input[type='number']");
-                const plusButton = product.querySelector(".plus");
-        
-                if (!minusButton || !quantityInput || !plusButton) {
-                    console.log("Ada elemen yang tidak ditemukan dalam produk:", product);
-                    return; // Menghentikan script jika ada elemen yang hilang
-                }
-        
-                minusButton.addEventListener("click", function () {
-                    console.log("Tombol - ditekan!"); // Debugging
-                    let currentValue = parseInt(quantityInput.value);
-                    if (currentValue > 1) {
-                        quantityInput.value = currentValue - 1;
-                    }
-                });
-        
-                plusButton.addEventListener("click", function () {
-                    console.log("Tombol + ditekan!"); // Debugging
-                    let currentValue = parseInt(quantityInput.value);
-                    quantityInput.value = currentValue + 1;
-                });
-            });
-        });
-        </script>
-
     <section class="checkout-summary">
         <label>
             <input type="checkbox" id="select-all"> Semua
         </label>
         <div class="total-container">
             <span>Total: <span id="total-price">Rp0</span></span>
-            <p id="discount-info">Hemat Rp0</p>
         </div>
         <button id="checkout-button">Checkout (0)</button>
     </section>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            console.log("Script berjalan!");
-        
             const products = document.querySelectorAll(".product");
             const totalPriceElement = document.getElementById("total-price");
             const checkoutButton = document.getElementById("checkout-button");
             const selectAllCheckbox = document.getElementById("select-all");
-            const discountInfo = document.getElementById("discount-info");
-        
+
             function updateTotal() {
                 let total = 0;
                 let totalItems = 0;
-                let discount = 0;
-        
+
                 products.forEach(product => {
                     const checkbox = product.querySelector("input[type='checkbox']");
                     const quantityInput = product.querySelector("input[type='number']");
-                    const priceElement = product.querySelector(".price");
-        
+                    const priceText = product.querySelector(".price").textContent.replace("Rp", "").replace(/\./g, "");
+                    const price = parseInt(priceText);
+                    
                     if (checkbox.checked) {
-                        let price = parseInt(priceElement.textContent.replace("Rp", "").replace(".", ""));
                         let quantity = parseInt(quantityInput.value);
                         total += price * quantity;
                         totalItems += quantity;
-                        discount += (price * quantity) * 0.1; // Contoh diskon 10%
                     }
                 });
-        
+
                 totalPriceElement.textContent = `Rp${total.toLocaleString()}`;
-                discountInfo.textContent = `Hemat Rp${discount.toLocaleString()}`;
                 checkoutButton.textContent = `Checkout (${totalItems})`;
                 checkoutButton.disabled = totalItems === 0;
             }
-        
+
+            function changeQuantity(input, amount) {
+                let newValue = Math.max(1, parseInt(input.value) + amount);
+                input.value = newValue;
+                updateTotal();
+            }
+
             products.forEach(product => {
                 const checkbox = product.querySelector("input[type='checkbox']");
                 const minusButton = product.querySelector(".minus");
-                const quantityInput = product.querySelector("input[type='number']");        
+                const quantityInput = product.querySelector("input[type='number']");
                 const plusButton = product.querySelector(".plus");
-        
+
                 checkbox.addEventListener("change", updateTotal);
-        
-                minusButton.addEventListener("click", function () {
-                    if (quantityInput.value > 1) {
-                        quantityInput.value = parseInt(quantityInput.value) - 1;
-                        updateTotal();
-                    }
-                });
-        
-                plusButton.addEventListener("click", function () {
-                    quantityInput.value = parseInt(quantityInput.value) + 1;
-                    updateTotal();
-                });
-        
+                minusButton.addEventListener("click", () => changeQuantity(quantityInput, -1));
+                plusButton.addEventListener("click", () => changeQuantity(quantityInput, 1));
                 quantityInput.addEventListener("input", updateTotal);
             });
-        
+
             selectAllCheckbox.addEventListener("change", function () {
                 const isChecked = this.checked;
                 products.forEach(product => {
@@ -249,9 +206,10 @@
                 });
                 updateTotal();
             });
-        
+
             updateTotal();
         });
-        </script>        
+    </script>
+        
 </body>
 </html>

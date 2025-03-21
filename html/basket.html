@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NÉVOFIA</title>
+    <link rel="stylesheet" href="/css/basket.css">
+</head>
+<body>
+    <header>
+        <h1>NÉVOFIA</h1>
+        <button class="cart">KERANJANG ANDA</button>
+        <nav>
+            <ul>
+                <li><a href="#">Catalog</a></li>
+                <li><a href="#">About Us</a></li>   
+                <li><a href="#">Reviews</a></li>
+                <li><button class="contact">Contact Us</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="cart-container">
+            <div class="store">
+                <!-- <span class="store-name">Toko NÉVOFIA</span> -->
+            </div>
+            <section class="product-list">
+                <div class="product">
+                    <input type="checkbox">
+                    <img src="/project-folder/image/lip2.jpg" alt="Lip Serum Laneige">
+                    <div class="details">
+                        <div class="name">Lip Serum Laneige</div>
+                        <div class="price">Rp64.000</div>
+                        <select class="variation-select">
+                            <option value="chocolate">CHOCOLATE FROSTING</option>
+                            <option value="peach">PEACH GLAZE</option>
+                            <option value="sugar">SUGAR GLAZE</option>
+                        </select>
+                        <div class="quantity-container">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <input type="checkbox">
+                    <img src="/project-folder/image/lip dear me.jpg" alt="Dear Me Beauty">
+                    <div class="details">
+                        <div class="name">Dear Me Beauty</div>
+                        <div class="price">Rp56.000</div>
+                        <select class="variation-select">
+                            <option value="rachel">Dear Rachel</option>
+                            <option value="vania">Dear Vania</option>
+                            <option value="debby">Dear Debby</option>
+                        </select>
+                        <div class="quantity-container">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <input type="checkbox">
+                    <img src="/project-folder/image/masker g2g.jpg" alt="Clay stick Glad2Glow">
+                    <div class="details">
+                        <div class="name">Clay stick Glad2Glow</div>
+                        <div class="price">Rp43.000</div>
+                        <select class="variation-select">
+                            <option value="pink">Brightening Clay Stick</option>
+                            <option value="hijau">Mugwork Clay Stick</option>
+                            <option value="abu">Volcano Clay Stick</option>
+                        </select>
+                        <div class="quantity-container">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <input type="checkbox">
+                    <img src="/project-folder/image/tavi.jpg" alt="Cream Blush Tavi">
+                    <div class="details">
+                        <div class="name">Cream Blush Tavi</div>
+                        <div class="price">Rp66.000</div>
+                        <select class="variation-select">
+                            <option value="love bites">LOVE BITES</option>
+                            <option value="starburst">STARBURST</option>
+                        </select>
+                        <div class="quantity-container">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <input type="checkbox">
+                    <img src="/project-folder/image/sunscreen skin.jpg" alt="Serum Sunscreen Skintific">
+                    <div class="details">
+                        <div class="name">Serum Sunscreen Skintific</div>
+                        <div class="price">Rp79.000</div>
+                        <select class="variation-select">
+                            <option value="matte">MATTE FIT</option>
+                            <option value="aqua">AQUA LIGHT</option>
+                        </select>
+                        <div class="quantity-container">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <input type="checkbox">
+                    <img src="/project-folder/image/DAZZLE ME Fixed Loose Powder.jpg" alt="Dazzle Me Loose Powder">
+                    <div class="details">
+                        <div class="name">Dazzle Me Loose Powder</div>
+                        <div class="price">Rp47.000</div>
+                        <select class="variation-select">
+                            <option value="satu">True Translucent</option>
+                            <option value="dua">Light Ivory</option>
+                            <option value="tiga">Medium Sand</option>
+                        </select>
+                        <div class="quantity-container">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Script berjalan!"); // Debugging: memastikan script berjalan
+        
+            document.querySelectorAll(".product").forEach(product => {
+                const minusButton = product.querySelector(".minus");
+                const quantityInput = product.querySelector("input[type='number']");
+                const plusButton = product.querySelector(".plus");
+        
+                if (!minusButton || !quantityInput || !plusButton) {
+                    console.log("Ada elemen yang tidak ditemukan dalam produk:", product);
+                    return; // Menghentikan script jika ada elemen yang hilang
+                }
+        
+                minusButton.addEventListener("click", function () {
+                    console.log("Tombol - ditekan!"); // Debugging
+                    let currentValue = parseInt(quantityInput.value);
+                    if (currentValue > 1) {
+                        quantityInput.value = currentValue - 1;
+                    }
+                });
+        
+                plusButton.addEventListener("click", function () {
+                    console.log("Tombol + ditekan!"); // Debugging
+                    let currentValue = parseInt(quantityInput.value);
+                    quantityInput.value = currentValue + 1;
+                });
+            });
+        });
+        </script>
+
+    <section class="checkout-summary">
+        <label>
+            <input type="checkbox" id="select-all"> Semua
+        </label>
+        <div class="total-container">
+            <span>Total: <span id="total-price">Rp0</span></span>
+            <p id="discount-info">Hemat Rp0</p>
+        </div>
+        <button id="checkout-button">Checkout (0)</button>
+    </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Script berjalan!");
+        
+            const products = document.querySelectorAll(".product");
+            const totalPriceElement = document.getElementById("total-price");
+            const checkoutButton = document.getElementById("checkout-button");
+            const selectAllCheckbox = document.getElementById("select-all");
+            const discountInfo = document.getElementById("discount-info");
+        
+            function updateTotal() {
+                let total = 0;
+                let totalItems = 0;
+                let discount = 0;
+        
+                products.forEach(product => {
+                    const checkbox = product.querySelector("input[type='checkbox']");
+                    const quantityInput = product.querySelector("input[type='number']");
+                    const priceElement = product.querySelector(".price");
+        
+                    if (checkbox.checked) {
+                        let price = parseInt(priceElement.textContent.replace("Rp", "").replace(".", ""));
+                        let quantity = parseInt(quantityInput.value);
+                        total += price * quantity;
+                        totalItems += quantity;
+                        discount += (price * quantity) * 0.1; // Contoh diskon 10%
+                    }
+                });
+        
+                totalPriceElement.textContent = `Rp${total.toLocaleString()}`;
+                discountInfo.textContent = `Hemat Rp${discount.toLocaleString()}`;
+                checkoutButton.textContent = `Checkout (${totalItems})`;
+                checkoutButton.disabled = totalItems === 0;
+            }
+        
+            products.forEach(product => {
+                const checkbox = product.querySelector("input[type='checkbox']");
+                const minusButton = product.querySelector(".minus");
+                const quantityInput = product.querySelector("input[type='number']");        
+                const plusButton = product.querySelector(".plus");
+        
+                checkbox.addEventListener("change", updateTotal);
+        
+                minusButton.addEventListener("click", function () {
+                    if (quantityInput.value > 1) {
+                        quantityInput.value = parseInt(quantityInput.value) - 1;
+                        updateTotal();
+                    }
+                });
+        
+                plusButton.addEventListener("click", function () {
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                    updateTotal();
+                });
+        
+                quantityInput.addEventListener("input", updateTotal);
+            });
+        
+            selectAllCheckbox.addEventListener("change", function () {
+                const isChecked = this.checked;
+                products.forEach(product => {
+                    product.querySelector("input[type='checkbox']").checked = isChecked;
+                });
+                updateTotal();
+            });
+        
+            updateTotal();
+        });
+        </script>        
+</body>
+</html>

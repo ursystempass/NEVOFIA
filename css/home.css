@@ -6,48 +6,84 @@ body {
     text-align: center;
 }
 
-header {
-    background-color: #f8d8d8;
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* Navbar tetap simple tanpa kotak */
 .navbar {
-  width: 100%;
-  max-width: 1200px;
-  margin: 10px auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-/* Brand name sesuai gambar */
-.brand-name {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Navigasi link */
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: #333;
-  font-size: 18px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-  color: #e57387;
-}
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Brand name */
+  .brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Navigation links */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #e57387;
+  }
+  
+  /* Hamburger button (hidden by default) */
+  .hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px 0;
+      width: 200px;
+      z-index: 9;
+    }
+  
+    .nav-links a {
+      padding: 10px 20px;
+      display: block;
+      text-align: left;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  }
+  
 
 .hero-container {
     position: relative;
@@ -166,13 +202,11 @@ header {
     margin: 20px auto;
     padding: 0 20px;
 }
-
-/* Kategori lebih ke kiri */
+/* Responsive Categories */
 .categories {
     display: flex;
     gap: 15px;
     margin-left: -30px;
-    /* Mendorong lebih ke kiri */
 }
 
 .categories button {
@@ -190,6 +224,18 @@ header {
 .categories button:hover {
     background: #872f2f;
     transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    .categories {
+        gap: 8px;
+        margin-left: 0;
+    }
+
+    .categories button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
 }
 
 /* Styling Search Bar */
@@ -215,7 +261,6 @@ header {
     font-size: 14px;
     border-radius: 20px;
     width: 180px;
-    /* Lebih lebar */
 }
 
 .search-btn {
@@ -233,50 +278,67 @@ header {
     background: #872f2f;
 }
 
+@media (max-width: 480px) {
+    .search-bar input {
+        width: 120px;
+    }
+}
 
-.products {
+
+
+
+/* Product List */
+.product-list, .featured-products {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
-    margin-top: 50px;
-}
-
-.product-card {
-    width: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  }
+  
+  .product-item, .featured-products .product-card {
+    width: 200px;
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-/* Efek Hover (Hanya Timbul) */
-.product-card:hover {
-    transform: scale(1.05);
-    /* Membesar sedikit */
-}
-
-.product-card img {
+  }
+  
+  .product-item img, .featured-products .product-card img {
     width: 100%;
-    height: auto;
-    max-height: 280px;
+    height: 200px;
     object-fit: cover;
-}
-
-.product-name {
-    margin-top: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  
+  .product-item:hover img, .featured-products .product-card:hover img {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-name {
     font-size: 16px;
     font-weight: bold;
     color: #333;
-}
-
-.price {
+    margin-top: 8px;
+  }
+  
+  .product-price {
     font-size: 14px;
-    font-weight: bold;
-    color: #a63e3e;
-    margin-top: 5px;
-}
+    color: #d9534f;
+  }
+  
+  /* Responsive Product List */
+  @media (max-width: 768px) {
+    .product-list, .featured-products {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 20px 10px;
+    }
+  
+    .product-item, .featured-products .product-card {
+      flex: 0 0 auto;
+      width: 200px;
+      max-width: none;
+    }
+  }
 
 .gallery-container {
     display: flex;

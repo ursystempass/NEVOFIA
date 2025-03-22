@@ -157,3 +157,21 @@ function removeFromBasket(index) {
     loadBasket(); // Refresh tampilan keranjang
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+
+    // Customer Review Slider
+    let index = 0;
+    function slideReviews() {
+        const slider = document.querySelector(".review-slider");
+        index = (index + 1) % 3;
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(slideReviews, 3000);
+});

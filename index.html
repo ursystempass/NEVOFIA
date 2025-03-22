@@ -1,44 +1,178 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmetic E-Commerce</title>
-    <link rel="stylesheet" href="css/login.css">
-    <script defer src="js/login.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Névofia - Cosmetic Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="brand-name">NEVOFIA</div>
-            <div class="nav-icons">
-                <a href="#"><i class="fas fa-home"></i></a>
-                <a href="#"><i class="fas fa-info-circle"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-            </div>
-        </nav>  
+      <nav class="navbar">
+        <div class="logo">NÉVOFIA</div>
+        <button class="hamburger">☰</button>
+        <ul class="nav-links">
+        <a href="/html/about.html">About Us</a>
+        <li><a href="#">Contact us</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="/html/login.html" class="login-link">Login</a></li>
+        </ul>
+      </nav>
     </header>
-    
-    <div class="container">
-        <div class="login-wrapper">
-            <div class="login-box">
-                <h2>LOGIN</h2>  
-                <input type="text" placeholder="Email" class="input-box">
-                <input type="password" placeholder="Password" class="input-box">
-                <button class="login-button">Login</button>
-                <p class="signup-text">DON’T HAVE AN ACCOUNT? <a href="register.html">SIGN UP</a></p>
-                <div class="social-icons">
-                    <i class="fab fa-google"></i>
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-twitter"></i>
-                </div>
-            </div>
-            <div class="image-section">
-                <img src="project-folder/image/bottle 2.png" alt="Pink Bottle">
-            </div>
+    <main>
+      <section class="hero">
+        <img src="/project-folder/image/lip 1.jpeg" alt="Hero Image" />
+        <div class="hero-text">
+          <h1>Find Your Beauty at the Most Complete Online Cosmetic Store!</h1>
+          <p>
+            Natural Glow, Confidence Every Day. Get 20% off your first purchase
+            with code CANTIK20.
+          </p>
         </div>
-    </div>
-</body>
+      </section>
+<!-- 
+      <section class="best-product">
+        <h2>Product of the Week</h2>
+        <div class="product-list">
+          <div class="product-item">
+            <img src="/project-folder/image/organics 1.jpg" alt="lip 11" />
+            <p class="product-name">Organic Lip Balm</p>
+          </div>
+          <div class="product-item">
+            <img src="/project-folder/image/organics 2.jpg" alt="lip 12" />
+            <p class="product-name">Hydrating Lip Oil</p>
+          </div>
+          <div class="product-item">
+            <img src="/project-folder/image/organics.jpg" alt="Prod1ct 3" />
+            <p class="product-name">Nourishing Lip Butter</p>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="product-list">
+        <div class="product-card">
+            <img src="/project-folder/image/organics 1.jpg" alt="Organic Product 1">
+            <p class="product-name">Organic Product 1</p>
+            <p class="product-price">Rp50.000</p>
+            <p><strong>Prize:</strong> Free Shipping</p>
+            <p><strong>Advantage:</strong> Natural Ingredients, Eco-friendly</p>
+        </div>
+    
+        <div class="product-card">
+            <img src="/project-folder/image/organics 2.jpg" alt="Organic Product 2">
+            <p class="product-name">Organic Product 2</p>
+            <p class="product-price">Rp75.000</p>
+            <p><strong>Prize:</strong> Cashback 10%</p>
+            <p><strong>Advantage:</strong> Gentle on Skin, Long-lasting</p>
+        </div>
+    
+        <div class="product-card">
+            <img src="/project-folder/image/organics.jpg" alt="Organic Product 3">
+            <p class="product-name">Organic Product 3</p>
+            <p class="product-price">Rp90.000</p>
+            <p><strong>Prize:</strong> Free Gift</p>
+            <p><strong>Advantage:</strong> Hydrating, Vegan</p>
+        </div>
+    </section>
+    
+
+      <section class="top-brand">
+        <h2>Top Choice Cosmetic Brand</h2>
+        <div class="brand-container">
+          <div class="brand">
+            <img src="/project-folder/image/blush 1.jpg" alt="Brand 1" />
+          </div>
+          <div class="brand">
+            <img src="/project-folder/image/lip 2.jpeg" alt="Brand 2" />
+          </div>
+          <div class="brand">
+            <img
+              src="/project-folder/image/DAZZLE ME Fixed Loose Powder.jpg"
+              alt="Brand 3"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="customer-review">
+        <h2>What Our Customers Say</h2>
+        <div class="review-wrapper">
+          <div class="review-slider">
+            <div class="review-container">
+              <div class="review-content">
+                <div class="review">
+                  <p>
+                    "I've been using Névofia's skincare products for months now, and I
+                    can confidently say my skin has never felt better! The hydration
+                    and glow it gives me are unmatched. Highly recommend to anyone
+                    looking for quality cosmetics."
+                  </p>
+                  <h4>- Sarah L.</h4>
+                </div>
+              </div>
+              <div class="review-image">
+                <img src="/project-folder/image/hoyeon.jpg" alt="Review Background" />
+              </div>
+            </div>
+            <div class="review-container">
+              <div class="review-content">
+                <div class="review">
+                  <p>
+                    "Absolutely love these products! My skin has never been this
+                    smooth and healthy. The ingredients feel so premium."
+                  </p>
+                  <h4>- Emily R.</h4>
+                </div>
+              </div>
+              <div class="review-image">
+                <img src="/project-folder/image/wony.jpg" alt="Review Background" />
+              </div>
+            </div>
+            <div class="review-container">
+              <div class="review-content">
+                <div class="review">
+                  <p>
+                    "The best skincare investment I've made. Every product delivers
+                    on its promise, and I love how gentle they are."
+                  </p>
+                  <h4>- James P.</h4>
+                </div>
+              </div>
+              <div class="review-image">
+                <img src="/project-folder/image/wony.jpg" alt="Review Background" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="unlock-beauty">
+        <h2>Unlock Your Glowing Skin Now!</h2>
+        <div class="beauty-container">
+          <div class="beauty-box">
+            <i class="fa-solid fa-check-circle"></i>
+            <!-- Jaminan Keaslian -->
+            <h3>Original Product</h3>
+            <p>100% Original Guarantee or Money Back.</p>
+          </div>
+          <div class="beauty-box">
+            <i class="fa-solid fa-tags"></i>
+            <!-- Harga Terbaik -->
+            <h3>Best Price Guarantee</h3>
+            <p>Get the best deals on all our products.</p>
+          </div>
+          <div class="beauty-box">
+            <i class="fa-solid fa-truck-fast"></i>
+            <!-- Pengiriman Cepat -->
+            <h3>Express Shipping</h3>
+            <p>Fast and secure delivery to all parts of Indonesia.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

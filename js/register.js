@@ -1,27 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const registerButton = document.querySelector(".register-button");
+    const registerForm = document.getElementById("register-form");
     const modal = document.getElementById("register-modal");
     const closeModal = document.getElementById("close-modal");
 
-    registerButton.addEventListener("click", function () {
-        const fullName = document.querySelector("input[placeholder='Full Name']").value.trim();
-        const email = document.querySelector("input[placeholder='Email']").value.trim();
-        const password = document.querySelector("input[placeholder='Password']").value.trim();
-        const confirmPassword = document.querySelector("input[placeholder='Confirm Password']").value.trim();
+    registerForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Mencegah reload halaman
 
-        if (fullName && email && password && confirmPassword) {
-            if (password !== confirmPassword) {
-                alert("Passwords do not match!");
-            } else {
-                modal.style.display = "flex"; // Tampilkan modal
-            }
-        } else {
+        // Ambil nilai input
+        const inputs = document.querySelectorAll(".input-box");
+        const fullName = inputs[0].value.trim();
+        const email = inputs[1].value.trim();
+        const password = inputs[2].value.trim();
+        const confirmPassword = inputs[3].value.trim();
+
+        // Validasi input
+        if (!fullName || !email || !password || !confirmPassword) {
             alert("Please fill in all fields.");
+            return;
         }
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        // Jika valid, tampilkan modal
+        modal.style.display = "flex";
+
+        setTimeout(() => {
+            window.location.href = "/html/login.html";
+        }, 3000);
     });
 
     closeModal.addEventListener("click", function () {
-        modal.style.display = "none"; // Sembunyikan modal
-        window.location.href = "login.html"; // Arahkan ke halaman login
+        modal.style.display = "none";
+        window.location.href = "/html/login.html";
     });
 });

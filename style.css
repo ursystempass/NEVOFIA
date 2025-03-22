@@ -1,0 +1,427 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbe3e3;
+    color: #000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    /* Menghapus warna navbar */
+    position: relative;
+}
+
+.logo {
+    font-size: 45px;
+    /* Ukuran lebih besar */
+    font-weight: bold;
+    letter-spacing: 4px;
+    /* Memberikan efek lebih elegan */
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+
+    padding: 5px 10px;
+}
+
+.login-link {
+    color: black;
+    /* Samakan dengan teks lainnya */
+    background: none;
+    /* Hapus background */
+    padding: 0;
+    /* Hapus padding agar tidak ada efek kotak */
+    border-radius: 0;
+    /* Hapus border radius */
+    font-weight: normal;
+    /* Samakan dengan menu lain */
+}
+
+/* Dropdown Animasi */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Transparan sedikit biar elegan */
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 150px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        pointer-events: none;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+}
+
+.hero img {
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.hero-text {
+    max-width: 600px;
+    font-size: 1.8em;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-weight: normal;
+}
+
+
+.best-product {
+    text-align: center;
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.best-product.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.best-product h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+/* Styling untuk container utama */
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px;
+    flex-wrap: wrap; /* Agar responsif saat layar lebih kecil */
+}
+
+/* Styling untuk setiap kartu produk */
+.product-card {
+    background-color: #e0b7bf; /* Warna lembut */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 280px; /* Lebar lebih besar */
+    height: 400px; /* Tinggi lebih besar */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styling untuk gambar produk */
+.product-card img {
+    width: 100%;
+    height: auto;
+    max-height: 220px; /* Batas tinggi gambar */
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Styling untuk nama produk */
+.product-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Styling untuk harga produk */
+.product-price {
+    font-size: 1em;
+    font-weight: bold;
+    color: #d9534f; /* Warna merah untuk harga */
+}
+
+/* Styling untuk teks lainnya */
+.product-card p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+
+/* .product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    gap: 8px;
+}
+
+.product-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, filter 0.3s ease-out;
+}
+
+.product-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-name {
+    margin-top: 5px;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #444;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.product-item:hover .product-name {
+    color: #b34560;
+} */
+
+/* Styling for top-brand */
+.top-brand {
+    text-align: center;
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.top-brand.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.top-brand h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.brand-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    gap: 8px;
+}
+
+.brand img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, filter 0.3s ease-out;
+}
+
+.brand:hover img {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.customer-review {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fde4e4;
+}
+
+.customer-review h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.review-wrapper {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.review-slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 300%;
+}
+
+.review-container {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 500px; /* Lebih pendek */
+    margin: auto;
+    padding: 20px;
+}
+
+.review-content {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d6a4a4;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-align: left;
+    font-style: italic;
+}
+
+.review h4 {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.review-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.review-image img {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.unlock-beauty {
+    text-align: center;
+    padding: 50px 20px;
+    /* Perbesar padding */
+}
+
+.unlock-beauty h2 {
+    font-size: 36px;
+    /* Perbesar judul */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.beauty-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.beauty-box {
+    background-color: #d3a5b3;
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+    /* Perbesar ukuran box */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.beauty-box i {
+    font-size: 60px;
+    /* Perbesar ikon */
+    color: #5a3e4f;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.beauty-box h3 {
+    font-size: 22px;
+    /* Perbesar judul dalam box */
+    font-weight: bold;
+}
+
+.beauty-box p {
+    font-size: 18px;
+    /* Perbesar teks deskripsi */
+}

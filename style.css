@@ -125,6 +125,40 @@ body {
     font-weight: normal;
 }
 
+/* Responsive untuk tablet dan handphone */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-text {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 20px;
+    }
+
+    .hero-text {
+        font-size: 1.2em;
+    }
+
+    .hero img {
+        border-radius: 5px;
+    }
+}
+
+
 
 .best-product {
     text-align: center;
@@ -151,18 +185,23 @@ body {
     justify-content: center;
     gap: 25px;
     padding: 40px;
-    flex-wrap: wrap; /* Agar responsif saat layar lebih kecil */
+    flex-wrap: wrap;
+    /* Agar responsif saat layar lebih kecil */
 }
 
 /* Styling untuk setiap kartu produk */
 .product-card {
-    background-color: #e0b7bf; /* Warna lembut */
+    background-color: #e0b7bf;
+    /* Warna lembut */
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    width: 280px; /* Lebar lebih besar */
-    height: 400px; /* Tinggi lebih besar */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    width: 280px;
+    /* Lebar lebih besar */
+    height: 400px;
+    /* Tinggi lebih besar */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    /* Efek bayangan */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,7 +212,8 @@ body {
 .product-card img {
     width: 100%;
     height: auto;
-    max-height: 220px; /* Batas tinggi gambar */
+    max-height: 220px;
+    /* Batas tinggi gambar */
     object-fit: contain;
     border-radius: 10px;
 }
@@ -190,7 +230,8 @@ body {
 .product-price {
     font-size: 1em;
     font-weight: bold;
-    color: #d9534f; /* Warna merah untuk harga */
+    color: #d9534f;
+    /* Warna merah untuk harga */
 }
 
 /* Styling untuk teks lainnya */
@@ -203,16 +244,25 @@ body {
 /* Responsif untuk layar kecil */
 @media (max-width: 768px) {
     .product-list {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: nowrap;
+        /* Mencegah item turun ke bawah */
+        overflow-x: auto;
+        /* Scroll horizontal jika melebihi lebar layar */
+        -webkit-overflow-scrolling: touch;
+        /* Scroll yang mulus di perangkat iOS */
+        padding: 20px 10px;
+        /* Padding yang lebih kecil */
     }
 
     .product-card {
-        width: 90%;
-        max-width: 320px;
+        flex: 0 0 auto;
+        /* Pastikan kartu tidak menyusut */
+        width: 80%;
+        /* Ukuran kartu yang lebih kecil untuk handphone */
+        max-width: 280px;
+        /* Batas maksimum lebar kartu */
     }
 }
-
 
 /* .product-list {
     display: flex;
@@ -279,29 +329,63 @@ body {
 .brand-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-.brand {
+.brand-card {
+    background-color: #e0b7bf;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 280px;
+    height: 400px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    width: 400px;
-    gap: 8px;
+    justify-content: space-between;
 }
 
-.brand img {
+.brand-card img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
     border-radius: 10px;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, filter 0.3s ease-out;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-.brand:hover img {
+.brand-card:hover img {
     transform: scale(1.05);
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.brand-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.brand-desc {
+    font-size: 1em;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .brand-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 20px 10px;
+    }
+
+    .brand-card {
+        flex: 0 0 auto;
+        width: 80%;
+        max-width: 280px;
+    }
 }
 
 .customer-review {
@@ -335,7 +419,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    max-width: 500px; /* Lebih pendek */
+    max-width: 500px;
+    /* Lebih pendek */
     margin: auto;
     padding: 20px;
 }

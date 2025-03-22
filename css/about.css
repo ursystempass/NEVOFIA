@@ -24,8 +24,6 @@ body {
     object-fit: cover;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-
 .hero h1 {
     position: absolute;
     top: 50%;
@@ -37,14 +35,10 @@ body {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 50px;
+    color: white;
     opacity: 0;
     filter: blur(5px);
     animation: fadeInText 1.5s ease-out forwards;
-}
-
-.hero h1 span {
-    display: block;
-    color: white;
 }
 
 @keyframes fadeInText {
@@ -60,6 +54,7 @@ body {
     }
 }
 
+/* BEST PRODUCT SECTION */
 .best-product {
     text-align: center;
     padding: 60px 20px;
@@ -86,12 +81,8 @@ body {
 }
 
 .product-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     width: 400px;
-    gap: 8px;
+    text-align: center;
 }
 
 .product-item img {
@@ -99,7 +90,7 @@ body {
     height: 400px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, filter 0.3s ease-out;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 .product-item:hover img {
@@ -107,155 +98,48 @@ body {
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.product-name {
-    margin-top: 5px;
-    font-size: 1.5em;
-    font-weight: normal;
-    color: #444;
-    text-transform: none;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease-in-out;
-}
-
-.product-item:hover .product-name {
-    color: #b34560;
-}
-
-.phyloshopy {
+/* PHYLOSHOPHY & MISSION */
+.phyloshopy, .mission {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
 }
 
-.phyloshopy .text {
-    width: 45%;
-    text-align: left;
-    margin-left: -30px;
-}
-
-.phyloshopy h3 {
-    font-size: 5.0em;
-    font-weight: bold;
-    text-transform: none;
-    line-height: 1.2;
-    text-align: left;
-    margin-left: -200px;
-}
-
-.phyloshopy h3 span {
-    display: block;
-}
-
-.phyloshopy p {
-    font-size: 2em;
-    font-style: italic;
-    text-align: right;
-    margin-top: 100px;
-    margin-right: 10px;
-    position: relative;
-}
-
-.phyloshopy p::before, 
-.phyloshopy p::after {
-    content: "“";
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #c2958b;
-}
-
-.phyloshopy p::after {
-    content: "”";
-}
-
-.phyloshopy video {
+/* Menyamakan ukuran gambar */
+.phyloshopy img,
+.mission img {
     width: 50%;
-    height: 1000px;
+    height: 700px;
     object-fit: cover;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-.mission {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding-top: 50px;
+/* Efek timbul saat hover */
+.phyloshopy img:hover,
+.mission img:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+.phyloshopy .text,
 .mission .text {
     width: 45%;
     text-align: left;
-    margin-left: -30px;
 }
 
+.phyloshopy h3,
 .mission h3 {
     font-size: 5.0em;
     font-weight: bold;
-    text-transform: none;
-    line-height: 1.2;
-    text-align: left;
-    margin-left: 300px; /* Sama seperti phyloshopy */
-    position: absolute;
-    color: rgb(0, 0, 0);
-}
-
-
-.mission h3 span {
-    display: block;
-}
-
-.mission p {
-    font-size: 2em;
-    font-style: italic;
-    text-align: right;
-    margin-top: 100px;
-    margin-right: 10px;
-    position: relative;
-    color: rgb(0, 0, 0);
-}
-
-.mission p::before, 
-.mission p::after {
-    content: "“";
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #c2958b;
-}
-
-.mission p::after {
-    content: "”";
-}
-
-.mission img {
-    width: 50%;
-    height: 1000px;
-    object-fit: cover;
+    line-height: 1.0; /* Jarak antar kata lebih dekat */
     margin-left: 50px;
 }
 
-/* FOOTER */
-footer {
-    background-color: #f5b7c3;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.column h4 {
-    font-size: 1em;
-    font-weight: bold;
-}
-
-.column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact {
-    font-size: 1.5em;
-    margin-top: 10px;
+.phyloshopy p,
+.mission p {
+    font-size: 1.8em;
+    font-style: italic;
+    text-align: right;
+    margin-top: 20px;
 }

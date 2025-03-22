@@ -13,33 +13,41 @@ header {
     justify-content: flex-end;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    margin: 0;
+/* Navbar tetap simple tanpa kotak */
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
-nav ul li {
-    margin: 0 10px;
+/* Brand name sesuai gambar */
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
-nav ul li a {
-    text-decoration: none;
-    background-color: #D1776A;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 15px;
-    font-size: 14px;
-    font-weight: bold;
-    transition: background 0.3s ease;
+/* Navigasi link */
+.nav-links {
+  display: flex;
+  gap: 20px;
 }
 
-nav ul li a:hover {
-    background-color: #b9655c;
+.nav-links a {
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
 
+.nav-links a:hover {
+  color: #e57387;
+}
 
 .hero-container {
     position: relative;

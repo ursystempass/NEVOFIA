@@ -33,17 +33,24 @@ body {
   color: #333;
 }
 
-/* Navigation Icons tanpa kotak */
-.nav-icons {
+/* Mengganti nav-icons jadi nav-links */
+.nav-links {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
-.nav-icons a {
+.nav-links a {
   color: #333;
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
+
+.nav-links a:hover {
+  color: #e57387;
+}
+
 
 /* Tambahkan jarak antara navbar dan konten */
 .container {

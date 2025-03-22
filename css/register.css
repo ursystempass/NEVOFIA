@@ -1,198 +1,141 @@
-/* styles.css */
+/* Mengatur background warna sesuai gambar */
 body {
-    background: #fddde6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  .navbar {
-    width: 90%;
-    max-width: 1200px;
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    z-index: 1000;
-  }
-  
-  .brand-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .nav-icons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-icons a {
-    color: #333;
-    font-size: 20px;
-    text-decoration: none;
-  }
-  
-  .container {
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 50px;
-  }
-  
+  background: #fddde6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar tetap simple tanpa kotak */
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Brand name sesuai gambar */
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Navigasi link */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #e57387;
+}
+
+.container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 40px 30px;
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.register-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.register-box h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #d9d9d9;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.register-button {
+  background: #f28b9c;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  max-width: 320px;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.register-button:hover {
+  background: #e57387;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
   .register-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    padding: 40px 30px;
-    max-width: 900px;
-    width: 100%;
-    height: auto;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    gap: 30px;
-  }
-  
-  .register-box {
-    flex: 1;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-  }
-  
-  .register-box h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 3px;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 30px;
   }
-  
-  .input-box {
-    width: 100%;
-    max-width: 320px;
-    padding: 12px;
-    border: none;
-    background: #d9d9d9;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 16px;
-    outline: none;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .register-button {
-    background: #f28b9c;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    max-width: 220px;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .register-button:hover {
-    background: #e57387;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .login-text {
-    font-size: 14px;
-  }
-  
-  .social-icons {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    font-size: 24px;
-  }
-  
-  .image-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image-section img {
+
+  .register-box {
     max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
   }
-  
-  @media (max-width: 768px) {
-    .register-wrapper {
-      flex-direction: column;
-      text-align: center;
-      padding: 30px;
-    }
-  
-    .image-section {
-      order: -1;
-    }
-  
-    .image-section img {
-      max-width: 80%;
-    }
+
+  .input-box {
+    max-width: 100%;
   }
-/* Modal Background */
-.modal {
-    display: none; /* Tersembunyi awalnya */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-/* Modal Box */
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+  .register-button {
+    max-width: 100%;
+  }
 }
-
-/* Modal Button */
-#close-modal {
-    background: #f28b9c;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-#close-modal:hover {
-    background: #e57387;
-}
-  

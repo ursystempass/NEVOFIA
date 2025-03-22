@@ -15,31 +15,30 @@
     <header>
       <nav class="navbar">
         <div class="brand-name">NEVOFIA</div>
-        <div class="nav-icons">
-          <a href="#"><i class="fas fa-home"></i></a>
-          <a href="#"><i class="fas fa-info-circle"></i></a>
-          <a href="#"><i class="fas fa-shopping-bag"></i></a>
-          <a href="#"><i class="fas fa-envelope"></i></a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
         </div>
-      </nav>
+    </nav>
+    
     </header>
 
     <div class="container">
       <div class="register-wrapper">
         <div class="image-section">
-          <img src="project-folder/image/bottle2.png" alt="Pink Bottle" />
+          <img src="/project-folder/image/bottle 2.png" alt="Pink Bottle" />
         </div>
         <div class="register-box">
           <h2>REGISTER</h2>
-          <input type="text" placeholder="Full Name" class="input-box" />
-          <input type="text" placeholder="Email" class="input-box" />
-          <input type="password" placeholder="Password" class="input-box" />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            class="input-box"
-          />
-          <button class="register-button">Register</button>
+          <form id="register-form">
+            <input type="text" placeholder="Full Name" class="input-box" required />
+            <input type="email" placeholder="Email" class="input-box" required />
+            <input type="password" placeholder="Password" class="input-box" required />
+            <input type="password" placeholder="Confirm Password" class="input-box" required />
+            <button type="submit" class="register-button">Register</button>
+          </form>
           <p class="login-text">
             Already have an account? <a href="login.html">Login</a>
           </p>
@@ -49,15 +48,11 @@
             <i class="fab fa-twitter"></i>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Modal Pop-up untuk konfirmasi -->
-    <div id="register-modal" class="modal">
-      <div class="modal-content">
-        <p>Registration successful! Redirecting to login page...</p>
-        <button id="close-modal">OK</button>
-      </div>
-    </div>
+                <div id="register-modal" class="modal" style="display: none;">
+          <div class="modal-content">
+            <p>Registration successful! Redirecting to login page...</p>
+            <button id="close-modal">OK</button>
+          </div>
+        </div>
   </body>
 </html>

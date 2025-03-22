@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Shopee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        
+        <!-- Alamat Pengiriman -->
+        <div class="section">
+            <h3>LALA (+62) 895620151454</h3>
+            <p>Perumahan Serasi Indah, Jalan Lemahmulya Blok A4.33</p>
+        </div>
+
+        <!-- Metode Pembayaran -->
+        <div class="section">
+            <h3>Metode Pembayaran</h3>
+            <select id="paymentMethod">
+                <option value="cod">COD - Cek Dulu</option>
+                <option value="spaylater">SPayLater</option>
+            </select>
+        </div>
+
+        <!-- Rincian Pembayaran -->
+        <div class="section">
+            <h3>Rincian Pembayaran</h3>
+            <p>Subtotal Produk: <span id="subtotalProduk">Rp43.800</span></p>
+            <p>Proteksi Produk: <span id="proteksiProduk">Rp1.500</span></p>
+            <p>Subtotal Pengiriman: <span id="subtotalPengiriman">Rp11.000</span></p>
+            <p>Biaya Layanan: <span id="biayaLayanan">Rp2.812</span></p>
+            <p>Total Diskon Pengiriman: <span id="diskonPengiriman">-Rp11.000</span></p>
+            <p><strong>Total Pembayaran: <span id="totalPembayaran">Rp48.112</span></strong></p>
+        </div>
+
+        <!-- Tombol Checkout -->
+        <button id="checkoutButton">Buat Pesanan</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

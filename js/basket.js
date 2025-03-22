@@ -109,3 +109,51 @@ document.addEventListener("DOMContentLoaded", function () {
         productContainer.appendChild(productElement);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadBasket();
+});
+
+function loadBasket() {
+    let basket = JSON.parse(localStorage.getItem("basket")) || [];
+    let basketContainer = document.getElementById("basket-container");
+    let totalPriceElement = document.getElementById("total-price");
+
+    if (basket.length === 0) {
+        basketContainer.innerHTML = "<p>Keranjang kosong.</p>";
+        totalPriceElement.textContent = "Rp0";
+        return;
+    }
+
+    let total = 0;
+    let basketHTML = "";
+
+    basket.forEach((item, index) => {
+        let subtotal = item.price * item.quantity;
+        total += subtotal;
+
+        basketHTML += `
+            <div class="basket-item">
+                <img src="${item.image}" alt="${item.name}">
+                <div class="item-info">
+                    <p class="item-name">${item.name}</p>
+                    <p class="item-category">${item.category}</p>
+                    <p class="item-price">Rp${subtotal.toLocaleString("id-ID")}</p>
+                    <p class="item-quantity">Jumlah: ${item.quantity}</p>
+                </div>
+                <button class="remove-btn" onclick="removeFromBasket(${index})">Hapus</button>
+            </div>
+        `;
+    });
+
+    basketContainer.innerHTML = basketHTML;
+    totalPriceElement.textContent = `Rp${total.toLocaleString("id-ID")}`;
+}
+
+function removeFromBasket(index) {
+    let basket = JSON.parse(localStorage.getItem("basket")) || [];
+    basket.splice(index, 1); // Hapus item berdasarkan index
+    localStorage.setItem("basket", JSON.stringify(basket));
+    loadBasket(); // Refresh tampilan keranjang
+}
+

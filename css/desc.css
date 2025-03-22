@@ -5,23 +5,94 @@ body {
     padding: 0;
 }
 
-header nav ul {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    /* Menghapus warna navbar */
+    position: relative;
+}
+
+.logo {
+    font-size: 45px;
+    /* Ukuran lebih besar */
+    font-weight: bold;
+    letter-spacing: 4px;
+    /* Memberikan efek lebih elegan */
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    padding: 10px;
+    gap: 20px;
+    padding: 0;
 }
 
-header nav ul li {
-    margin: 0 10px;
+.nav-links li {
+    display: inline;
 }
 
-header nav ul li a {
+.nav-links a {
     text-decoration: none;
-    background-color: #D1776A;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 15px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+
+    padding: 5px 10px;
+}
+
+.login-link {
+    color: black;
+    /* Samakan dengan teks lainnya */
+    background: none;
+    /* Hapus background */
+    padding: 0;
+    /* Hapus padding agar tidak ada efek kotak */
+    border-radius: 0;
+    /* Hapus border radius */
+    font-weight: normal;
+    /* Samakan dengan menu lain */
+}
+
+/* Dropdown Animasi */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        /* Transparan sedikit biar elegan */
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 150px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        pointer-events: none;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
 }
 
 .product-container {

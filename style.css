@@ -387,7 +387,6 @@ body {
         max-width: 280px;
     }
 }
-
 .customer-review {
     text-align: center;
     padding: 60px 20px;
@@ -420,7 +419,6 @@ body {
     justify-content: center;
     gap: 15px;
     max-width: 500px;
-    /* Lebih pendek */
     margin: auto;
     padding: 20px;
 }
@@ -455,12 +453,53 @@ body {
 
 .review-image img {
     width: 100%;
-    max-width: 400px;
-    height: 400px;
+    max-width: 350px;
+    height: 350px;
     object-fit: cover;
     border-radius: 10px;
 }
 
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .review-container {
+        max-width: 90%;
+        padding: 15px;
+        border: 2px solid #d6a4a4; /* Membuat kotak di sekitar container */
+        border-radius: 15px; /* Sudut membulat */
+    }
+
+    .review-content {
+        font-size: 1em;
+        padding: 20px;
+    }
+
+    .review h4 {
+        font-size: 1.1em;
+    }
+
+    .review-image img {
+        max-width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-container {
+        max-width: 100%;
+        padding: 10px;
+        border: 2px solid #d6a4a4; /* Kotak tetap di layar kecil */
+        border-radius: 15px;
+    }
+
+    .review-content {
+        font-size: 0.9em;
+    }
+
+    .review-image img {
+        max-width: 200px;
+        height: 200px;
+    }
+}
 
 .unlock-beauty {
     text-align: center;

@@ -1,60 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skincare Catalog</title>
-    <link rel="stylesheet" href="/css/product 1.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NÉVOFIA</title>
+    <link rel="stylesheet" href="/css/product 1.css" />
+    <script defer src="/js/product-1.js"></script>
+  </head>
 
-<body>
-  <div class="header-container">
-      <h1 class="skincare-title">Skincare</h1>
-      <div class="search-bar">
-          <input type="text" placeholder="Cari produk..." class="search-input">
-          <button class="search-btn">Cari</button>
-      </div>
+  <body>
+    <div class="header-container">
       <nav class="navbar">
-          <div class="nav-links">
-              <a href="#">Catalog</a>
-              <a href="#">About Us</a>
-              <a href="#">Reviews</a>
-              <a href="#">Contact Us</a>
-          </div>
+        <h1 class="skincare-title">Skincare</h1>
+        <button class="hamburger">☰</button>
+        <ul class="nav-links">
+          <a href="/html/home.html">Home</a>
+          <a href="/html/about.html">About Us</a>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="/html/login.html" class="login-link">Login</a></li>
+        </ul>
       </nav>
-  </div>
+    </div>
 
-  <div class="filter-bar">
-      <button class="filter-btn">Terkait</button>
-      <button class="filter-btn">Terbaru</button>
-      <button class="filter-btn">Terlaris</button>
-      <button class="filter-btn">Harga</button>
-      <button class="filter-btn">Diskon</button>
-      <button class="filter-btn">Premium</button>
-      <button class="filter-btn">Favorit</button>
-  </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Cari produk..." class="search-input" />
+      <button class="search-btn">Cari</button>
+    </div>
 
-  <div class="product-grid">
-      <div class="product-card">
-          <img src="/project-folder/image/apple.jpeg" alt="Loose Powder">
-          <p class="product-price">Rp 30.000</p>
-          <p>Loose Powder</p>
+    <div class="main-content">
+      <div class="filter-bar">
+        <button class="filter-btn" data-filter="related">Terkait</button>
+        <button class="filter-btn" data-filter="newest">Terbaru</button>
+        <button class="filter-btn" data-filter="bestseller">Terlaris</button>
+        <button class="filter-btn" data-filter="favorite">Favorit</button>
       </div>
 
-      <div class="product-card">
-          <img src="/project-folder/image/apple.jpeg" alt="Loose Powder">
-          <p class="product-price">Rp 30.000</p>
-          <p>Loose Powder</p>
+      <div class="product-grid" id="product-grid">
+        <!-- Produk di-generate secara dinamis di sini -->
       </div>
 
-      <div class="product-card">
-          <img src="/project-folder/image/apple.jpeg" alt="Loose Powder">
-          <p class="product-price">Rp 30.000</p>
-          <p>Loose Powder</p>
-      </div>
-  </div>
+      <p class="footer-text">Sudah menampilkan semua produk</p>
+    </div>
 
-  <p class="footer-text">Sudah menampilkan semua produk</p>
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const productGrid = document.getElementById("product-grid");
 
+        // Data produk
+        const products = Array.from({ length: 7 }, (_, index) => ({
+          image: "/project-folder/image/apple.jpeg",
+          name: `Loose Powder ${index + 1}`,
+          price: "Rp 30.000",
+          rating: "★★★★★",
+          date: new Date(2025, 2, 22 - index),
+          sold: 50 + index * 5
+        }));
+
+        // Fungsi untuk menampilkan produk
+        function renderProducts(products) {
+          productGrid.innerHTML = "";
+          products.forEach(product => {
+            const productCard = document.createElement("div");
+            productCard.className = "product-card";
+            productCard.innerHTML = `
+              <img src="${product.image}" alt="${product.name}">
+              <p class="product-price">${product.price}</p>
+              <p>${product.name}</p>
+              <p class="rating">${product.rating}</p>
+              <p class="product-date">Tanggal: ${product.date.toLocaleDateString()}</p>
+              <p class="product-sold">${product.sold} Terjual</p>
+            `;
+            productGrid.appendChild(productCard);
+          });
+        }
+
+        // Render awal
+        renderProducts(products);
+
+        // Filter produk
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        filterButtons.forEach(button => {
+          button.addEventListener("click", () => {
+            const filter = button.getAttribute("data-filter");
+            let filteredProducts = [...products];
+
+            switch (filter) {
+              case "newest":
+                filteredProducts.sort((a, b) => b.date - a.date);
+                break;
+              case "bestseller":
+                filteredProducts.sort((a, b) => b.sold - a.sold);
+                break;
+              case "favorite":
+                filteredProducts = filteredProducts.filter(p => p.rating === "★★★★★");
+                break;
+              default:
+                filteredProducts = products;
+            }
+
+            renderProducts(filteredProducts);
+          });
+        });
+
+        // Toggle navigasi
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -123,3 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("hamburger").addEventListener("click", function () {
     document.getElementById("navLinks").classList.toggle("open");
   });
+
+  function redirectTo(page) {
+    window.location.href = "/html/" + page;
+}

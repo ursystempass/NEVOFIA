@@ -5,9 +5,9 @@ function changeImage(imageSrc) {
 
 // Pergantian otomatis untuk gambar lip product setiap 3 detik
 const lipImages = [
-    "/project-folder/image/hoyeon.jpg",
-    "/project-folder/image/model.jpeg",
-    "/project-folder/image/apple.jpeg"
+    "/NEVOFIA/project-folder/image/hoyeon.jpg",
+    "/NEVOFIA/project-folder/image/model.jpeg",
+    "/NEVOFIA/project-folder/image/apple.jpeg"
 ];
 
 let currentLipIndex = 0;

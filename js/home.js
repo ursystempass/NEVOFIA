@@ -120,10 +120,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.getElementById("hamburger").addEventListener("click", function () {
-    document.getElementById("navLinks").classList.toggle("open");
-  });
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
 
-  function redirectTo(page) {
-    window.location.href = "/html/" + page;
-}
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+  });

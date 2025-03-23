@@ -6,40 +6,96 @@ body {
   padding: 0;
 }
 
-/* Navbar tetap simple tanpa kotak */
 .navbar {
-  width: 100%;
-  max-width: 1200px;
-  margin: 10px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  background-color: transparent;
+  /* Menghapus warna navbar */
+  position: relative;
 }
 
-/* Brand name sesuai gambar */
-.brand-name {
-  font-size: 24px;
+.logo {
+  font-size: 45px;
+  /* Ukuran lebih besar */
   font-weight: bold;
-  color: #333;
+  letter-spacing: 4px;
+  /* Memberikan efek lebih elegan */
 }
 
-/* Navigasi link */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .nav-links {
+  list-style: none;
   display: flex;
   gap: 20px;
+  padding: 0;
+  z-index: 10; /* Tambahkan z-index di sini */
+
+}
+
+.nav-links li {
+  display: inline;
 }
 
 .nav-links a {
-  color: #333;
-  font-size: 18px;
   text-decoration: none;
+  color: black;
+  font-size: 16px;
   font-weight: bold;
-  transition: color 0.3s ease-in-out;
+
+  padding: 5px 10px;
 }
 
-.nav-links a:hover {
-  color: #e57387;
+.login-link {
+  color: black;
+  /* Samakan dengan teks lainnya */
+  background: none;
+  /* Hapus background */
+  padding: 0;
+  /* Hapus padding agar tidak ada efek kotak */
+  border-radius: 0;
+  /* Hapus border radius */
+  font-weight: normal;
+  /* Samakan dengan menu lain */
+}
+
+/* Dropdown Animasi */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+
+  .nav-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      /* Transparan sedikit biar elegan */
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      width: 150px;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+      pointer-events: none;
+  }
+
+  .nav-links.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+  }
 }
 
 .container {

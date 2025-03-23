@@ -12,7 +12,7 @@ document.querySelector(".login-button").addEventListener("click", function() {
 });
 
 document.querySelector(".register-button").addEventListener("click", function() {
-    window.location.href = "/html/register.html";
+    window.location.href = "/NEVOFIA/html/register.html";
 });
 
 document.addEventListener("DOMContentLoaded", function () {

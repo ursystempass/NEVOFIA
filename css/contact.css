@@ -1,0 +1,136 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+/* Mengatur tampilan keseluruhan */
+body {
+    font-family: 'Arial';
+    font-size: 20px;
+    background-color: #fbe3e3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container utama */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #e0b7bf;
+    padding: 80px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+/* Judul halaman */
+h1 {
+    font-size: 45px; 
+    font-family: 'arial', sans-serif !important;
+    font-weight: 1200px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: rgb(77, 33, 83);
+}
+
+/* garis */
+.content {
+    display: flex;
+    position: relative;
+    border: 1px solid rgb(247, 245, 245);
+    padding: 8%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Bagian kanan (formulir + kontak) */
+.right {
+    flex: 1;
+    width: 100%;
+    padding-left: 20px;
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid rgb(68, 21, 62);
+    font-size: 29px;
+    font-family: 'arial', sans-serif !important;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    margin: 10px 0;
+    display: block;
+}
+
+textarea {
+    font-size: 29px; 
+    font-family: 'arial', sans-serif !important;
+    resize: none; 
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgb(64, 50, 50) !important; 
+    opacity: 1; 
+    font-size: 29px;
+    font-weight: normal;
+}
+
+/* Tombol submit */
+button {
+    width: 100%; /* Sesuai dengan input field */
+    padding: 12px;
+    background-color: #d3a5b3;
+    color: #612645;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b571a6;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Menyebarkan elemen ke kiri & kanan */
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Kontak di kiri */
+.contact-info {
+    text-align: left;
+    flex: 1;
+}
+
+/* Based in di kanan */
+.location-info {
+    text-align: right;
+    flex: 1;
+}
+
+/* Ikon sosial media berada di bawah */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Pusatkan ikon */
+    gap: 15px;
+    margin-top: 15px;
+}
+

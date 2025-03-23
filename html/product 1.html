@@ -13,10 +13,10 @@
         <h1 class="skincare-title">Skincare</h1>
         <button class="hamburger">☰</button>
         <ul class="nav-links">
-          <a href="/NEVOFIA/html/home.html">Home</a>
-          <a href="/NEVOFIA/html/about.html">About Us</a>
-          <li><a href="/NEVOFIA/html/contact.html">Contact us</a></li>
-          <li><a href="/NEVOFIA/html/login.html" class="login-link">Login</a></li>
+            <a href="/NEVOFIA/html/basket.html" class="cart-icon">🛒</a>
+            <a href="/NEVOFIA/html/home.html">Home</a>
+            <a href="/NEVOFIA/html/about.html">About Us</a>
+            <li><a href="/NEVOFIA/html/contact.html">Contact us</a></li>
         </ul>
       </nav>
     </div>
@@ -87,15 +87,6 @@
             sold: 200
           }
         ];
-        // Data produk
-        const products = Array.from({ length: 7 }, (_, index) => ({
-          image: "/NEVOFIA/project-folder/image/apple.jpeg",
-          name: `Loose Powder ${index + 1}`,
-          price: "Rp 30.000",
-          rating: "★★★★★",
-          date: new Date(2025, 2, 22 - index),
-          sold: 50 + index * 5
-        }));
 
         // Fungsi untuk menampilkan produk
         function renderProducts(products) {
@@ -154,4 +145,3 @@
     </script>
   </body>
 </html>
-

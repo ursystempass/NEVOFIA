@@ -8,11 +8,11 @@ document.querySelector(".image-section img").addEventListener("mouseleave", func
 });
 
 document.querySelector(".login-button").addEventListener("click", function() {
-    window.location.href = "/html/home.html";
+    window.location.href = "/NEVOFIA/html/home.html";
 });
 
 document.querySelector(".register-button").addEventListener("click", function() {
-    window.location.href = "/html/register.html";
+    window.location.href = "/NEVOFIA/html/register.html";
 });
 
 document.addEventListener("DOMContentLoaded", function () {

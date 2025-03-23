@@ -27,3 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Pesanan berhasil dibuat! Total pembayaran: " + totalPembayaran.textContent);
     });
 });
+
+document.querySelector(".hamburger").addEventListener("click", () => {
+    document.querySelector(".nav-links").classList.toggle("active");
+});
+
+function showConfirmation() {
+    document.querySelector('.checkout-container').style.display = 'none';
+    document.querySelector('.confirmation-container').style.display = 'block';
+}

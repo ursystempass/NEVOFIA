@@ -274,10 +274,11 @@ body {
 
 .related-products {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    /* Agar tetap responsif di layar kecil */
+    gap: 15px;
+    overflow-x: auto; /* Scroll horizontal */
+    scroll-snap-type: x mandatory;
+    padding: 10px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling di iOS */
 }
 
 .related-products img {
@@ -290,14 +291,10 @@ body {
     opacity: 0.8;
     /* Sedikit transparan */
 }
-
 .product-card {
-    width: 280px;
-    /* Perbesar lebar gambar */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex: 0 0 auto; /* Mencegah item mengecil */
+    width: 250px; /* Ukuran tetap */
+    scroll-snap-align: start;
 }
 
 .product-card img {
@@ -314,3 +311,32 @@ body {
     font-size: 16px;
     font-weight: bold;
 }
+
+.related-products::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar */
+}
+
+@media (max-width: 768px) {
+    .related-products {
+        justify-content: flex-start; /* Biarkan item dalam satu baris */
+        overflow-x: scroll; /* Scroll hanya di HP */
+        padding-bottom: 10px; /* Jeda bawah agar tidak terlalu ketat */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-container img {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-container img {
+      width: 70%;
+    }
+  }

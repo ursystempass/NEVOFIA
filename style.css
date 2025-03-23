@@ -12,16 +12,13 @@ body {
     align-items: center;
     padding: 10px 20px;
     background-color: transparent;
-    /* Menghapus warna navbar */
     position: relative;
 }
 
 .logo {
     font-size: 45px;
-    /* Ukuran lebih besar */
     font-weight: bold;
     letter-spacing: 4px;
-    /* Memberikan efek lebih elegan */
 }
 
 .hamburger {
@@ -54,18 +51,12 @@ body {
 
 .login-link {
     color: black;
-    /* Samakan dengan teks lainnya */
     background: none;
-    /* Hapus background */
     padding: 0;
-    /* Hapus padding agar tidak ada efek kotak */
     border-radius: 0;
-    /* Hapus border radius */
     font-weight: normal;
-    /* Samakan dengan menu lain */
 }
 
-/* Dropdown Animasi */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -78,7 +69,6 @@ body {
         top: 60px;
         right: 20px;
         background-color: rgba(255, 255, 255, 0.9);
-        /* Transparan sedikit biar elegan */
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -125,7 +115,6 @@ body {
     font-weight: normal;
 }
 
-/* Responsive untuk tablet dan handphone */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -179,29 +168,22 @@ body {
     margin-bottom: 40px;
 }
 
-/* Styling untuk container utama */
 .product-list {
     display: flex;
     justify-content: center;
     gap: 25px;
     padding: 40px;
     flex-wrap: wrap;
-    /* Agar responsif saat layar lebih kecil */
 }
 
-/* Styling untuk setiap kartu produk */
 .product-card {
     background-color: #e0b7bf;
-    /* Warna lembut */
     padding: 20px;
     border-radius: 15px;
     text-align: center;
     width: 280px;
-    /* Lebar lebih besar */
     height: 400px;
-    /* Tinggi lebih besar */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    /* Efek bayangan */
     display: flex;
     flex-direction: column;
     align-items: center;

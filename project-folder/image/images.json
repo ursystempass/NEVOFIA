@@ -1,21 +1,20 @@
 {
   "images": [
-  "/NEVOFIA/project-folder/image/lip 1.jpeg",
-  "/NEVOFIA/project-folder/image/model.jpeg",
-  "/NEVOFIA/project-folder/image/hoyeon.jpg",
-  "/NEVOFIA/project-folder/image/apple.jpeg",
-  "/NEVOFIA/project-folder/image/lip 2.jpeg",
-  "/NEVOFIA/project-folder/image/bottle.jpg"
-],
-    "products": [
-      { "img": "lip 1.jpeg", "name": "Blush On", "price": "Rp 45.000" },
-      { "img": "lip 2.jpeg", "name": "Lipstick", "price": "Rp 55.000" },
-      { "img": "bottle.jpg", "name": "Eyeliner", "price": "Rp 35.000" }
-    ],
-    "heroImages": [
-      "/NEVOFIA/project-folder/image/lip 2.jpeg",
-      "/NEVOFIA/project-folder/image/hoyeon.jpg",
-      "/NEVOFIA/project-folder/image/apple.jpeg"
+    "lip 1.jpeg",
+    "model.jpeg",
+    "hoyeon.jpg",
+    "apple.jpeg",
+    "lip 2.jpeg",
+    "bottle.jpg"
+  ],
+  "products": [
+    { "img": "lip 1.jpeg", "name": "Blush On", "price": "Rp 45.000" },
+    { "img": "lip 2.jpeg", "name": "Lipstick", "price": "Rp 55.000" },
+    { "img": "bottle.jpg", "name": "Eyeliner", "price": "Rp 35.000" }
+  ],
+  "heroImages": [
+    "/NEVOFIA/project-folder/image/lip 2.jpeg",
+    "/NEVOFIA/project-folder/image/hoyeon.jpg",
+    "/NEVOFIA/project-folder/image/apple.jpeg"
   ]
-  }
-  
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NÉVOFIA</title>
-    <link rel="stylesheet" href="/NEVOFIA/css/basket.css">
+    <link rel="stylesheet" href="/css/basket.css">
     <script defer src="/js/basket.js"></script>
 </head>
 <body>
@@ -13,11 +13,11 @@
             <div class="logo">NÉVOFIA</div>
             <button class="hamburger">☰</button>
             <ul class="nav-links">
-            <!-- <a href="/NEVOFIA/html/about.html">About Us</a> -->
-            <li><a href="/NEVOFIA/html/home.html">Home</a></li>
-            <li><a href="/NEVOFIA/html/contact.html">Contact us</a></li>
+            <!-- <a href="/html/about.html">About Us</a> -->
+            <li><a href="/html/home.html">Home</a></li>
+            <li><a href="/html/contact.html">Contact us</a></li>
               <!-- <li><a href="#">Help</a></li> -->
-              <li><a href="/NEVOFIA/html/login.html" class="login-link">Login</a></li>
+              <li><a href="/html/login.html" class="login-link">Login</a></li>
             </ul>
           </nav>
     </header>
@@ -30,7 +30,7 @@
             <section class="product-list">
                 <div class="product">
                     <input type="checkbox">
-                    <img src="/NEVOFIA/project-folder/image/lip2.jpg" alt="Lip Serum Laneige">
+                    <img src="/project-folder/image/lip2.jpg" alt="Lip Serum Laneige">
                     <div class="details">
                         <div class="name">Lip Serum Laneige</div>
                         <div class="price">Rp64.000</div>
@@ -49,7 +49,7 @@
 
                 <div class="product">
                     <input type="checkbox">
-                    <img src="/NEVOFIA/project-folder/image/lip dear me.jpg" alt="Dear Me Beauty">
+                    <img src="/project-folder/image/lip dear me.jpg" alt="Dear Me Beauty">
                     <div class="details">
                         <div class="name">Dear Me Beauty</div>
                         <div class="price">Rp56.000</div>
@@ -68,7 +68,7 @@
 
                 <div class="product">
                     <input type="checkbox">
-                    <img src="/NEVOFIA/project-folder/image/masker g2g.jpg" alt="Clay stick Glad2Glow">
+                    <img src="/project-folder/image/masker g2g.jpg" alt="Clay stick Glad2Glow">
                     <div class="details">
                         <div class="name">Clay stick Glad2Glow</div>
                         <div class="price">Rp43.000</div>
@@ -87,7 +87,7 @@
 
                 <div class="product">
                     <input type="checkbox">
-                    <img src="/NEVOFIA/project-folder/image/tavi.jpg" alt="Cream Blush Tavi">
+                    <img src="/project-folder/image/tavi.jpg" alt="Cream Blush Tavi">
                     <div class="details">
                         <div class="name">Cream Blush Tavi</div>
                         <div class="price">Rp66.000</div>
@@ -105,7 +105,7 @@
 
                 <div class="product">
                     <input type="checkbox">
-                    <img src="/NEVOFIA/project-folder/image/sunscreen skin.jpg" alt="Serum Sunscreen Skintific">
+                    <img src="/project-folder/image/sunscreen skin.jpg" alt="Serum Sunscreen Skintific">
                     <div class="details">
                         <div class="name">Serum Sunscreen Skintific</div>
                         <div class="price">Rp79.000</div>
@@ -123,7 +123,7 @@
 
                 <div class="product">
                     <input type="checkbox">
-                    <img src="/NEVOFIA/project-folder/image/DAZZLE ME Fixed Loose Powder.jpg" alt="Dazzle Me Loose Powder">
+                    <img src="/project-folder/image/DAZZLE ME Fixed Loose Powder.jpg" alt="Dazzle Me Loose Powder">
                     <div class="details">
                         <div class="name">Dazzle Me Loose Powder</div>
                         <div class="price">Rp47.000</div>
@@ -151,7 +151,9 @@
         <div class="total-container">
             <span>Total: <span id="total-price">Rp0</span></span>
         </div>
-        <button id="checkout-button">Checkout (0)</button>
+<a href="/html/checkout.html">
+    <button id="checkout-button">Checkout (0)</button>
+</a>
     </section>
 
     <script>
@@ -231,10 +233,10 @@
 
             loadCartFromStorage();
         });
+checkoutButton.addEventListener("click", function () {
+    window.location.href = "/html/checkout.html";
+});
 
-        checkoutButton.addEventListener("click", function () {
-            window.location.href = "checkout.html";
-        });
     </script>
           <footer class="footer">
             <p>&copy; 2025 Névofia. All Rights Reserved.</p>

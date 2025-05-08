@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NÉVOFIA</title>
     <link rel="stylesheet" href="/NEVOFIA/css/desc.css" />
-    <script defer src="/js/desc.js"></script>
+    <script defer src="/NEVOFIA/js/desc.js"></script>
   </head>
   <body>
-      <header>
-        <nav class="navbar">
-          <div class="logo">NÉVOFIA</div>
-          <button class="hamburger">☰</button>
-          <ul class="nav-links">
-            <a href="/NEVOFIA/html/basket.html" class="cart-icon">🛒</a>
-            <li><a href="/NEVOFIA/html/home.html">Home</a></li>
-            <li><a href="/NEVOFIA/html/about.html">About Us</a></li>
-            <li><a href="/NEVOFIA/html/contact.html">Contact Us</a></li>
-          </ul>
+    <header>
+      <nav class="navbar">
+        <div class="logo">NÉVOFIA</div>
+
+        <button class="hamburger" id="hamburger">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
       </nav>
-      
-      </header>
+
+      <!-- Search bar di bawah navbar -->
+      <div class="search-wrapper">
+        <div class="search-container">
+          <input type="text" placeholder="Cari produk..." />
+          <button class="search-btn">Cari</button>
+        </div>
+      </div>
+    </header>
 
     <main>
       <section class="product-container">
@@ -28,22 +36,22 @@
           <div class="product-image-box">
             <img
               id="productImage"
-              src="/NEVOFIA/project-folder/image/apple.jpeg"
+              src="/NEVOFIA/project-folder/image/heroa1.jpg"
               alt="Product Image"
             />
           </div>
           <div class="product-gallery">
             <img
-              src="/NEVOFIA/project-folder/image/bottle.jpg"
-              onclick="changeImage('/project-folder/image/apple.jpeg')"
+              src="/NEVOFIA/project-folder/image/phy.jpg"
+              onclick="changeImage('/project-folder/image/heroa1.jpg')"
             />
             <img
-              src="/NEVOFIA/project-folder/image/hoyeon.jpg"
-              onclick="changeImage('/project-folder/image/apple.jpeg')"
+              src="/NEVOFIA/project-folder/image/heroa2.jpg"
+              onclick="changeImage('/project-folder/image/heroa1.jpg')"
             />
             <img
-              src="/NEVOFIA/project-folder/image/model.jpeg"
-              onclick="changeImage('/project-folder/image/apple.jpeg')"
+              src="/NEVOFIA/project-folder/image/mission.jpg"
+              onclick="changeImage('/project-folder/image/heroa1.jpg')"
             />
           </div>
         </div>
@@ -55,58 +63,80 @@
             ivory. Perfect for hosting a single stem or small floral spray.
           </p>
           <div class="product-price-container">
-            <span class="product-price" id="product-price" data-price="200000">Rp200.000</span>
+            <span class="product-price" id="product-price" data-price="200000"
+              >Rp200.000</span
+            >
             <div class="quantity-selector">
               <button class="qty-btn" onclick="decreaseQuantity()">-</button>
               <span id="quantity">1</span>
               <button class="qty-btn" onclick="increaseQuantity()">+</button>
             </div>
           </div>
-          <button class="add-to-basket" onclick="addToBasket()">ADD TO CART →</button>
+          <button class="add-to-basket" onclick="addToBasket()">
+            ADD TO CART →
+          </button>
         </div>
       </section>
 
       <section class="lip-product">
         <img
           id="lipProductImage"
-          src="/NEVOFIA/project-folder/image/apple.jpeg"
+          src="/NEVOFIA/project-folder/image/heroa1.jpg"
           alt="Lip Product"
         />
+      </section>
+      <section class="product-detail">
+        <div class="specs">
+          <h3>Spesifikasi Produk</h3>
+          <ul>
+            <li><span>Jenis Produk</span><a href="#">Liptint (Cair)</a></li>
+            <li><span>Tekstur</span><a href="#">Ringan, tidak lengket</a></li>
+            <li><span>Finish</span><a href="#">Natural / Glossy</a></li>
+            <li><span>Fungsi</span><a href="#">Pewarna bibir</a></li>
+            <li>
+              <span>Ketahanan Warna</span
+              ><a href="#">4–8 jam (tergantung aktivitas)</a>
+            </li>
+          </ul>
+        </div>
+        <div class="description">
+          <h3>Deskripsi Produk</h3>
+          <p>
+            Tampil segar dan natural setiap hari dengan liptint multifungsi yang
+            ringan dan nyaman digunakan! Liptint ini memiliki tekstur cair yang
+            mudah diaplikasikan, memberikan warna yang tahan lama dan tampilan
+            bibir yang lembap alami. Diformulasikan dengan bahan-bahan yang
+            ramah di kulit, liptint ini cocok untuk segala jenis kulit, bahkan
+            untuk bibir yang cenderung kering.
+          </p>
+          <p>
+            Dengan hasil akhir yang natural hingga glossy, produk ini dapat
+            digunakan tidak hanya pada bibir, tapi juga sebagai blush on atau
+            eyeshadow untuk tampilan makeup yang fresh dan praktis. Pilihan
+            warnanya pun beragam, dari yang soft hingga bold, sesuai dengan mood
+            dan gaya harianmu.
+          </p>
+          <p>
+            Cocok digunakan untuk remaja maupun dewasa, liptint ini wajib jadi
+            salah satu item andalan di pouch makeup kamu! Tampil cantik dan
+            percaya diri kini semakin mudah — cukup satu produk untuk tampil
+            flawless dengan cara yang effortless!
+          </p>
+        </div>
       </section>
 
       <section class="see-also">
         <h3>SEE ALSO</h3>
         <div class="related-products">
-          <div class="product-card">
-            <img
-              src="/NEVOFIA/project-folder/image/model.jpeg"
-              alt="Related Product 1"
-            />
-            <p class="product-name">Produk 1</p>
-          </div>
-          <div class="product-card">
-            <img
-              src="/NEVOFIA/project-folder/image/hoyeon.jpg"
-              alt="Related Product 2"
-            />
-            <p class="product-name">Produk 2</p>
-          </div>
-          <div class="product-card">
-            <img
-              src="/NEVOFIA/project-folder/image/bottle.jpg"
-              alt="Related Product 3"
-            />
-            <p class="product-name">Produk 3</p>
-          </div>
+            <img src="/NEVOFIA/project-folder/image/see1 (1).jpg" alt="Related Product 1" />
+            <img src="/NEVOFIA/project-folder/image/see1 (2).jpg" alt="Related Product 2" />
+            <img src="/NEVOFIA/project-folder/image/see1 (3).jpg" alt="Related Product 3" />
         </div>
         <div class="see-more-container">
-          <a href="/lihat-selengkapnya.html" class="see-more-btn"
-            >Lihat Selengkapnya</a
-          >
+            <a href="/lihat-selengkapnya.html" class="see-more-btn">Lihat Selengkapnya</a>
         </div>
-      </section>
+    </section>
+    
     </main>
-
-
   </body>
 </html>

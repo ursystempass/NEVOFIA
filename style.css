@@ -2,8 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fbe3e3;
-    color: #000;
+    background-color: #FDF5F2;
+    /* Aksen krem */
+    color: #b33a30;
+    /* Merah wine */
 }
 
 .navbar {
@@ -19,6 +21,8 @@ body {
     font-size: 45px;
     font-weight: bold;
     letter-spacing: 4px;
+    color: #803542; /* Warna wine */
+    /* Merah wine */
 }
 
 .hamburger {
@@ -42,15 +46,16 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: black;
+    color: #b33a30;
+    /* Merah wine */
     font-size: 16px;
     font-weight: bold;
-
     padding: 5px 10px;
 }
 
 .login-link {
-    color: black;
+    color: #b33a30;
+    /* Merah wine */
     background: none;
     padding: 0;
     border-radius: 0;
@@ -85,7 +90,6 @@ body {
         pointer-events: auto;
     }
 }
-
 
 .hero {
     display: flex;
@@ -147,8 +151,6 @@ body {
     }
 }
 
-
-
 .best-product {
     text-align: center;
     padding: 60px 20px;
@@ -166,18 +168,22 @@ body {
     font-size: 2.5em;
     text-transform: uppercase;
     margin-bottom: 40px;
+    color: #b33a30;
+    /* Merah wine */
 }
 
 .product-list {
     display: flex;
     justify-content: center;
     gap: 25px;
-    padding: 40px;
     flex-wrap: wrap;
+    padding: 60px 20px;
+    /* disamakan dengan top-brand */
 }
 
 .product-card {
-    background-color: #e0b7bf;
+    background-color: #fbe3e3;
+    /* Pink pastel - boleh diganti ke #f2dce2 biar selaras */
     padding: 20px;
     border-radius: 15px;
     text-align: center;
@@ -188,107 +194,60 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-/* Styling untuk gambar produk */
 .product-card img {
     width: 100%;
     height: auto;
     max-height: 220px;
-    /* Batas tinggi gambar */
     object-fit: contain;
     border-radius: 10px;
 }
 
-/* Styling untuk nama produk */
+
 .product-name {
     font-size: 1.2em;
     font-weight: bold;
-    color: #333;
+    color: #b33a30;
+    /* Merah wine */
     margin-top: 10px;
 }
 
-/* Styling untuk harga produk */
 .product-price {
     font-size: 1em;
     font-weight: bold;
-    color: #d9534f;
-    /* Warna merah untuk harga */
+    color: #b33a30;
+    /* Merah wine */
 }
 
-/* Styling untuk teks lainnya */
-.product-card p {
-    margin: 5px 0;
-    font-size: 1em;
-    color: #555;
-}
-
-/* Responsif untuk layar kecil */
-@media (max-width: 768px) {
-    .product-list {
-        flex-wrap: nowrap;
-        /* Mencegah item turun ke bawah */
-        overflow-x: auto;
-        /* Scroll horizontal jika melebihi lebar layar */
-        -webkit-overflow-scrolling: touch;
-        /* Scroll yang mulus di perangkat iOS */
-        padding: 20px 10px;
-        /* Padding yang lebih kecil */
-    }
-
-    .product-card {
-        flex: 0 0 auto;
-        /* Pastikan kartu tidak menyusut */
-        width: 80%;
-        /* Ukuran kartu yang lebih kecil untuk handphone */
-        max-width: 280px;
-        /* Batas maksimum lebar kartu */
-    }
-}
-
-/* .product-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.product-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 400px;
-    gap: 8px;
-}
-
-.product-item img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, filter 0.3s ease-out;
-}
-
-.product-item:hover img {
+.product-card:hover img {
     transform: scale(1.05);
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.product-name {
-    margin-top: 5px;
-    font-size: 1.5em;
-    font-weight: normal;
-    color: #444;
-    text-transform: none;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease-in-out;
+.product-card p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #b33a30;
+    /* Merah wine */
 }
 
-.product-item:hover .product-name {
-    color: #b34560;
-} */
+@media (max-width: 768px) {
+    .product-list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 20px 10px;
+    }
 
-/* Styling for top-brand */
+    .product-card {
+        flex: 0 0 auto;
+        width: 80%;
+        max-width: 280px;
+    }
+}
+
 .top-brand {
     text-align: center;
     padding: 60px 20px;
@@ -306,6 +265,8 @@ body {
     font-size: 2.5em;
     text-transform: uppercase;
     margin-bottom: 40px;
+    color: #b33a30;
+    /* Merah wine */
 }
 
 .brand-container {
@@ -316,7 +277,8 @@ body {
 }
 
 .brand-card {
-    background-color: #e0b7bf;
+    background-color: #fbe3e3;
+    /* Pink pastel */
     padding: 20px;
     border-radius: 15px;
     text-align: center;
@@ -346,13 +308,15 @@ body {
 .brand-name {
     font-size: 1.2em;
     font-weight: bold;
-    color: #333;
+    color: #b33a30;
+    /* Merah wine */
     margin-top: 10px;
 }
 
 .brand-desc {
     font-size: 1em;
-    color: #555;
+    color: #b33a30;
+    /* Merah wine */
 }
 
 @media (max-width: 768px) {
@@ -369,16 +333,20 @@ body {
         max-width: 280px;
     }
 }
+
 .customer-review {
     text-align: center;
     padding: 60px 20px;
-    background-color: #fde4e4;
+    background-color: #fbd3da;
+    /* Pink muda pastel */
 }
 
 .customer-review h2 {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 30px;
+    color: #b33a30;
+    /* Merah wine */
 }
 
 .review-wrapper {
@@ -410,11 +378,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #d6a4a4;
+    background-color: #dcbdc3;
+    /* Abu-pink pastel */
     padding: 25px;
     border-radius: 10px;
     font-size: 1.2em;
-    color: #ffffff;
+    color: #b33a30;
+    /* Merah wine */
     text-align: left;
     font-style: italic;
 }
@@ -424,7 +394,8 @@ body {
     margin-top: 10px;
     font-size: 1.3em;
     font-weight: bold;
-    color: #fff;
+    color: #b33a30;
+    /* Merah wine */
 }
 
 .review-image {
@@ -441,13 +412,13 @@ body {
     border-radius: 10px;
 }
 
-/* Responsif untuk layar kecil */
 @media (max-width: 768px) {
     .review-container {
         max-width: 90%;
         padding: 15px;
-        border: 2px solid #d6a4a4; /* Membuat kotak di sekitar container */
-        border-radius: 15px; /* Sudut membulat */
+        border: 2px solid #dcbdc3;
+        /* Sesuai box */
+        border-radius: 15px;
     }
 
     .review-content {
@@ -469,7 +440,8 @@ body {
     .review-container {
         max-width: 100%;
         padding: 10px;
-        border: 2px solid #d6a4a4; /* Kotak tetap di layar kecil */
+        border: 2px solid #dcbdc3;
+        /* Sesuai box */
         border-radius: 15px;
     }
 
@@ -486,14 +458,14 @@ body {
 .unlock-beauty {
     text-align: center;
     padding: 50px 20px;
-    /* Perbesar padding */
 }
 
 .unlock-beauty h2 {
     font-size: 36px;
-    /* Perbesar judul */
     font-weight: bold;
     margin-bottom: 30px;
+    color: #b33a30;
+    /* Merah wine */
 }
 
 .beauty-container {
@@ -504,30 +476,166 @@ body {
 }
 
 .beauty-box {
-    background-color: #d3a5b3;
+    background-color: #f2dce2;
+    /* Warna pink soft */
     padding: 30px;
     border-radius: 12px;
     width: 320px;
-    /* Perbesar ukuran box */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .beauty-box i {
     font-size: 60px;
-    /* Perbesar ikon */
-    color: #5a3e4f;
+    color: #850e35;
+    /* Deep red aksen */
     margin-bottom: 15px;
     display: block;
 }
 
 .beauty-box h3 {
     font-size: 22px;
-    /* Perbesar judul dalam box */
     font-weight: bold;
+    color: #b33a30;
+    /* Merah wine */
 }
 
 .beauty-box p {
     font-size: 18px;
-    /* Perbesar teks deskripsi */
+    color: #b33a30;
+    /* Merah wine */
+}
+
+.site-footer {
+    width: 100%;
+    background-color: #FDF5F2;
+    /* Aksen krem */
+    color: #b33a30;
+    /* Merah wine */
+    padding: 40px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-brand h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #b33a30;
+    /* Merah wine */
+    margin-bottom: 10px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #b33a30;
+    /* Merah wine */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #b33a30;
+    /* Merah wine */
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #d1776a;
+    /* Merah muda */
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: #b33a30;
+    /* Merah wine */
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #d1776a;
+    /* Merah muda */
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-brand h2 {
+        text-align: center;
+    }
+
+    .footer-social {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card,
+    .brand-card {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .product-card img,
+    .brand-card img {
+        max-height: 180px;
+    }
+
+    .product-name,
+    .brand-name {
+        font-size: 1em;
+    }
+
+    .product-price,
+    .brand-desc,
+    .product-card p {
+        font-size: 0.9em;
+    }
+
+    .product-list,
+    .brand-container {
+        padding: 10px;
+        gap: 15px;
+    }
 }

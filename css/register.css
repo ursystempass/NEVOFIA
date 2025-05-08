@@ -1,35 +1,40 @@
-/* Mengatur background warna sesuai gambar */
 body {
-  background: #fddde6;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #FDF5F2; /* Latar krem terang */
+  color: #000; /* Warna teks utama */
 }
 
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: transparent;
-  /* Menghapus warna navbar */
   position: relative;
 }
 
 .logo {
   font-size: 45px;
-  /* Ukuran lebih besar */
   font-weight: bold;
   letter-spacing: 4px;
-  /* Memberikan efek lebih elegan */
+  color: #803542; /* Warna wine */
 }
 
+/* Hamburger button */
 .hamburger {
   display: none;
   font-size: 24px;
   background: none;
   border: none;
   cursor: pointer;
+  color: #4B2B2D; /* teks netral gelap */
+}
+
+.navbar .hamburger.active {
+  color: #D6B4A5; /* warna krem lembut saat aktif */
 }
 
 .nav-links {
@@ -37,67 +42,90 @@ body {
   display: flex;
   gap: 20px;
   padding: 0;
-  z-index: 10; /* Tambahkan z-index di sini */
-
 }
 
 .nav-links li {
-  display: inline;
+  text-decoration: none !important;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: black;
-  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+  color: #803542;
   font-weight: bold;
-
-  padding: 5px 10px;
+  transition: background-color 0.3s;
+  border-radius: 6px;
+  text-decoration: none !important;
 }
 
 .login-link {
   color: black;
-  /* Samakan dengan teks lainnya */
   background: none;
-  /* Hapus background */
   padding: 0;
-  /* Hapus padding agar tidak ada efek kotak */
   border-radius: 0;
-  /* Hapus border radius */
   font-weight: normal;
-  /* Samakan dengan menu lain */
 }
 
 /* Dropdown Animasi */
+/* Dropdown mobile */
 @media (max-width: 768px) {
   .hamburger {
       display: block;
   }
 
   .nav-links {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: rgba(255, 255, 255, 0.9);
-      /* Transparan sedikit biar elegan */
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      width: 150px;
-      opacity: 0;
-      transform: translateY(-10px);
-      transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-      pointer-events: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: rgba(248, 230, 233, 0.95);
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    width: 180px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    pointer-events: none;
+    gap: 10px;
+    z-index: 1000; /* ⬅️ Tambahkan ini agar selalu di atas */
   }
+  
 
   .nav-links.active {
       opacity: 1;
       transform: translateY(0);
       pointer-events: auto;
   }
+
+  .nav-links a {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+      color: #803542;
+      padding: 8px 0;
+      border-radius: 6px;
+      width: 100%;
+      display: flex;
+  }
+
+  .nav-links a i {
+      display: none;
+  }
+
+  .nav-links a .label {
+      display: inline;
+      width: 100%;
+      text-align: center;
+  }
 }
 
+/* Tambahkan jarak antara navbar dan konten */
 .container {
   margin-top: 60px;
   display: flex;
@@ -107,57 +135,60 @@ body {
   padding-bottom: 50px;
 }
 
-.register-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 30px;
-  padding: 40px 30px;
-  max-width: 900px;
-  width: 100%;
-  height: auto;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(15px);
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.register-box {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  max-width: 320px;
-}
-
-.register-box h2 {
+/* Style untuk tulisan REGISTER */
+.login-title {
   font-size: 24px;
   font-weight: bold;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
+/* Wrapper register tetap rapi */
+.login-wrapper {
+  display: flex;
+  justify-content: flex-start; /* Posisi gambar di kiri */
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 25px 55px;
+  max-width: 1000px;
+  width: 100%;
+  height: 450px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  gap: 30px;
+}
+
+/* Form register tetap di tengah */
+.login-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Input yang lebih pendek & sejajar */
 .input-box {
   width: 100%;
+  max-width: 320px;
   padding: 12px;
-  border: none;
+  border: 1.5px solid #E2BEBF;
   background: #d9d9d9;
   border-radius: 20px;
   text-align: center;
   font-size: 16px;
   outline: none;
   transition: 0.3s ease-in-out;
-  margin-bottom: 10px;
 }
 
-.register-button {
-  background: #f28b9c;
+/* Tombol register lebih manis */
+.login-button {
+  background: #803542;
   color: white;
   padding: 12px;
   border: none;
@@ -165,33 +196,223 @@ body {
   cursor: pointer;
   font-size: 16px;
   width: 100%;
-  max-width: 320px;
+  max-width: 220px;
   transition: 0.3s ease-in-out;
-  text-align: center;
-  margin-top: 10px;
 }
 
-.register-button:hover {
+.login-button:hover {
   background: #e57387;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(33, 19, 19, 0.2);
 }
 
+/* Teks login */
+.signup-text {
+  font-size: 14px;
+}
+
+/* Ikon sosial */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 24px;
+}
+
+/* Bagian gambar */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Responsif: Sesuaikan posisi di layar kecil */
 @media (max-width: 768px) {
-  .register-wrapper {
+  .login-wrapper {
     flex-direction: column;
     text-align: center;
     padding: 30px;
   }
 
-  .register-box {
-    max-width: 100%;
+  .image-section {
+    order: -1; /* Gambar akan muncul di atas form */
+  }
+
+  .image-section img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 30px;
+    padding: 0 16px;
+  }
+
+  .login-wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 24px;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .login-box {
+    width: 100%;
   }
 
   .input-box {
     max-width: 100%;
+    padding: 10px;
+    font-size: 15px;
   }
 
-  .register-button {
+  .login-button {
     max-width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .image-section {
+    order: -1;
+    width: 100%;
+  }
+
+  .image-section img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .login-title {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .social-icons {
+    font-size: 20px;
+    gap: 12px;
   }
 }
+
+@media (max-width: 480px) {
+  .login-wrapper {
+    padding: 20px 16px;
+    max-width: 100%;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  .login-title {
+    font-size: 18px;
+  }
+
+  .input-box,
+  .login-button {
+    font-size: 14px;
+  }
+}
+
+/* Menyesuaikan gambar sebelah kiri */
+.login-wrapper {
+  flex-direction: row; /* Gambar di sebelah kiri dan form di kanan */
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-icon {
+  text-decoration: none;
+  color: #803542;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.nav-icon:hover {
+  color: #D6B4A5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 30px;
+    padding: 0 16px;
+  }
+
+  .login-wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 24px;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .login-box {
+    width: 100%;
+  }
+
+  .input-box {
+    max-width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .login-button {
+    max-width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .image-section {
+    order: -1;
+    width: 100%;
+  }
+
+  .image-section img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .login-title {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .social-icons {
+    font-size: 20px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-wrapper {
+    padding: 20px 16px;
+    max-width: 100%;
+  }
+
+  .input-box,
+  .login-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .login-title {
+    font-size: 18px;
+  }
+}
+

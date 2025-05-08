@@ -1,0 +1,32 @@
+{
+    "heroImages": [
+      "/NEVOFIA/project-folder/image/apple.jpeg",
+      "/NEVOFIA/project-folder/image/banana.jpeg",
+      "/NEVOFIA/project-folder/image/organics.jpg"
+    ],
+    "promoImages": [
+      "/NEVOFIA/project-folder/image/lip 1.jpeg",
+      "/NEVOFIA/project-folder/image/lip 2.jpeg",
+      "/NEVOFIA/project-folder/image/lip 3.jpeg"
+    ],
+   
+  "images": [
+    "image1.jpg",
+    "image2.jpg",
+    "image3.jpg"
+  ],
+  "products": [
+    {
+      "name": "Product 1",
+      "img": "product1.jpg",
+      "price": "$25.00"
+    },
+    {
+      "name": "Product 2",
+      "img": "product2.jpg",
+      "price": "$30.00"
+    }
+  ]
+  }
+  
+  

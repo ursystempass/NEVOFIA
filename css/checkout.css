@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: #FCE8D5;
+    background: #FDF5F2;
+    color: #4B2B2D;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,79 +13,86 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* memastikan logo di kiri dan keranjang di kanan */
     align-items: center;
+    width: 100%;
     padding: 10px 20px;
     background-color: transparent;
-    /* Menghapus warna navbar */
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
   }
-  
-  .logo {
+
+.logo {
     font-size: 45px;
-    /* Ukuran lebih besar */
     font-weight: bold;
     letter-spacing: 4px;
-    /* Memberikan efek lebih elegan */
-  }
-  
-  .hamburger {
+    color: #4B2B2D;
+}
+
+.hamburger {
     display: none;
     font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
-  }
-  
-  .nav-links {
+    color: #4B2B2D;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
     padding: 0;
-    z-index: 10; /* Tambahkan z-index di sini */
-  
-  }
-  
-  .nav-links li {
+    z-index: 10;
+}
+
+.nav-links li {
     display: inline;
-  }
-  
-  .nav-links a {
+}
+
+.nav-links a {
     text-decoration: none;
-    color: black;
+    color: #4B2B2D;
     font-size: 16px;
     font-weight: bold;
-  
     padding: 5px 10px;
-  }
-  
-  .login-link {
-    color: black;
-    /* Samakan dengan teks lainnya */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #638ECB;
+}
+
+.login-link {
+    color: #4B2B2D;
     background: none;
-    /* Hapus background */
     padding: 0;
-    /* Hapus padding agar tidak ada efek kotak */
     border-radius: 0;
-    /* Hapus border radius */
     font-weight: normal;
-    /* Samakan dengan menu lain */
+}
+
+.cart-icon {
+    font-size: 24px;
+    text-decoration: none;
+    color: #4B2B2D;
   }
-  
-  /* Dropdown Animasi */
-  @media (max-width: 768px) {
+  .cart-icon:hover {
+    color: #638ECB;
+  }
+@media (max-width: 768px) {
     .hamburger {
         display: block;
     }
-  
+
     .nav-links {
         display: flex;
         flex-direction: column;
         position: absolute;
         top: 60px;
         right: 20px;
-        background-color: rgba(255, 255, 255, 0.9);
-        /* Transparan sedikit biar elegan */
+        background-color: rgba(240, 243, 250, 0.95);
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -94,22 +102,22 @@ body {
         transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
         pointer-events: none;
     }
-  
+
     .nav-links.active {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
     }
-  }
+}
 
 .checkout-container {
-    margin-top: 120px;
+    margin-top: 100px;
     display: flex;
     gap: 20px;
     background: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(99, 142, 203, 0.15);
     width: 90%;
     max-width: 1200px;
     box-sizing: border-box;
@@ -118,10 +126,11 @@ body {
 
 .section {
     width: calc(33.33% - 20px);
-    background: white;
+    background: #FFFFFF;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D5DEEF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
 }
 
@@ -134,14 +143,17 @@ body {
     font-weight: bold;
     margin-bottom: 8px;
     font-size: 14px;
+    color: #4B2B2D;
 }
 
 .form-group input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #e57387;
+    border: 1px solid #f4d6d9;
     border-radius: 8px;
     font-size: 14px;
+    background-color: #F0F3FA;
+    color: #4B2B2D;
 }
 
 .delivery-options button {
@@ -152,10 +164,16 @@ body {
     margin-right: 10px;
     transition: 0.3s;
     font-size: 14px;
+    background: #D5DEEF;
+    color: #4B2B2D;
+}
+
+.delivery-options button:hover {
+    background: #B1C9EF;
 }
 
 .delivery-options .active {
-    background: #e57387;
+    background: #638ECB;
     color: white;
 }
 
@@ -164,15 +182,15 @@ body {
     padding: 14px;
     border: none;
     border-radius: 8px;
-    background: #ff5f57;
+    background: #803542;
     color: white;
     cursor: pointer;
     font-size: 16px;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 .checkout-btn:hover {
-    background: #872f2f;
+    background: #4B2B2D;
 }
 
 .order-item img {
@@ -186,7 +204,7 @@ body {
     padding: 40px 20px;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(57, 88, 134, 0.2);
     margin-top: 140px;
     max-width: 600px;
 }
@@ -195,12 +213,12 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    color: orange;
+    color: #f4d6d9;
 }
 
 .success-icon {
     font-size: 60px;
-    color: orange;
+    color: #638ECB;
 }
 
 .continue-btn {
@@ -210,12 +228,17 @@ body {
     margin-top: 20px;
     border: none;
     border-radius: 8px;
-    background: orange;
+    background: #638ECB;
     color: white;
     cursor: pointer;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
+    transition: background 0.3s;
+}
+
+.continue-btn:hover {
+    background: #4B2B2D;
 }
 
 @media (max-width: 768px) {
@@ -246,9 +269,6 @@ body {
         font-size: 14px;
     }
 
-    .hamburger {
-        display: block;
-    }
 
     .nav-links {
         display: none;
@@ -256,7 +276,7 @@ body {
         position: absolute;
         top: 60px;
         right: 20px;
-        background: white;
+        background: #F0F3FA;
         padding: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;

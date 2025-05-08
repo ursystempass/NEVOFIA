@@ -1,5 +1,5 @@
 body {
-    background-color: #f8dada;
+    background-color: #F0F3FA; /* dari #f8dada ke biru terang */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -7,83 +7,97 @@ body {
 }
 
 .navbar {
-    width: 100%;
-    max-width: 1200px;
-    margin: 10px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: relative;
-    z-index: 10;
-  }
-  
-  /* Brand name */
-  .brand-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Navigation links */
-  .nav-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .nav-links a:hover {
-    color: #e57387;
-  }
-  
-  /* Hamburger button (hidden by default) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  /* Menghapus warna navbar */
+  position: relative;
+}
+
+.logo {
+  font-size: 45px;
+  /* Ukuran lebih besar */
+  font-weight: bold;
+  letter-spacing: 4px;
+  /* Memberikan efek lebih elegan */
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  z-index: 10; /* Tambahkan z-index di sini */
+
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #395886; /* Biru tua */
+  font-size: 16px;
+  font-weight: bold;
+
+  padding: 5px 10px;
+}
+
+.login-link {
+    color: #395886; /* Biru tua */
+  /* Samakan dengan teks lainnya */
+  background: none;
+  /* Hapus background */
+  padding: 0;
+  /* Hapus padding agar tidak ada efek kotak */
+  border-radius: 0;
+  /* Hapus border radius */
+  font-weight: normal;
+  /* Samakan dengan menu lain */
+}
+
+/* Dropdown Animasi */
+@media (max-width: 768px) {
   .hamburger {
-    display: none;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
+      display: block;
   }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
+
+  .nav-links {
+      display: flex;
       flex-direction: column;
       position: absolute;
       top: 60px;
-      right: 0;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 10px 0;
-      width: 200px;
-      z-index: 9;
-    }
-  
-    .nav-links a {
-      padding: 10px 20px;
-      display: block;
-      text-align: left;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-  
-    .nav-links.open {
-      display: flex;
-    }
+      right: 20px;
+      background-color: rgba(241, 246, 255, 0.9); /* dari putih ke biru sangat terang */
+      /* Transparan sedikit biar elegan */
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      width: 150px;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+      pointer-events: none;
   }
-  
+
+  .nav-links.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+  }
+}
+
 
 .hero-container {
     position: relative;
@@ -210,7 +224,7 @@ body {
 }
 
 .categories button {
-    background: #a63e3e;
+    background: #638ECB; /* dari merah ke biru medium */
     color: white;
     border: none;
     padding: 12px 18px;
@@ -222,7 +236,7 @@ body {
 }
 
 .categories button:hover {
-    background: #872f2f;
+    background: #395886; /* biru tua saat hover */
     transform: scale(1.05);
 }
 
@@ -242,11 +256,11 @@ body {
 .search-bar {
     display: flex;
     align-items: center;
-    background: white;
+    background: #F0F3FA;
     padding: 5px 10px;
     border-radius: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid #a63e3e;
+    border: 2px solid #638ECB;
     transition: all 0.3s ease;
 }
 
@@ -264,7 +278,7 @@ body {
 }
 
 .search-btn {
-    background: #a63e3e;
+    background: #638ECB;
     color: white;
     border: none;
     cursor: pointer;
@@ -275,7 +289,7 @@ body {
 }
 
 .search-btn:hover {
-    background: #872f2f;
+    background: #395886;
 }
 
 @media (max-width: 480px) {
@@ -321,7 +335,7 @@ body {
   
   .product-price {
     font-size: 14px;
-    color: #d9534f;
+    color: #395886;
   }
   
   /* Responsive Product List */

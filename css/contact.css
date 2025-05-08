@@ -19,11 +19,105 @@ body {
     width: 90%;
     background-color: #e0b7bf;
     padding: 40px; /* Padding lebih kecil */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Bagi ruang secara merata */
+    align-items: center; /* Pusatkan secara vertikal */
+    padding: 10px 20px;
+    background-color: transparent; /* Transparan */
+    position: fixed; /* Tetap di atas saat scroll */
+    top: 0;
+    left: 0;
+    width: 100%; /* Lebar penuh */
+    z-index: 1000; /* Pastikan di atas elemen lain */
+}
+
+.logo {
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.hamburger {
+    display: none; /* Sembunyikan di layar besar */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; /* Susun secara horizontal */
+    gap: 20px; /* Beri jarak antar item */
+    padding: 0;
+    position: relative; /* Mengikuti posisi navbar */
+    z-index: 1001; /* Pastikan di atas konten lain */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.login-link {
+    color: black;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font-weight: normal;
+}
+
+/* Tampilkan hamburger di layar kecil */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column; /* Susun vertikal di layar kecil */
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 150px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        pointer-events: none; /* Hindari interaksi sebelum aktif */
+        z-index: 1002; /* Pastikan di atas elemen lain */
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto; /* Izinkan interaksi saat aktif */
+    }
+}
+/* Container utama - Ukuran lebih kecil */
+.container {
+    margin-top: 100px; /* Beri jarak agar tidak tertutup navbar */
+    max-width: 600px;
+    width: 90%;
+    background-color: #e0b7bf;
+    padding: 40px;
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 2;
-}
 
 /* Judul halaman - Font lebih kecil */
 h1 {
@@ -131,4 +225,4 @@ button:hover {
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
-}
+

@@ -1,230 +1,395 @@
 body {
     font-family: Arial, sans-serif;
-    background: #FCE8D5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    background-color: #FDF5F2;
     margin: 0;
-    box-sizing: border-box;
-    flex-direction: column;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 20px;
-    z-index: 1000;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    color: #333;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
+    padding: 1rem 2rem;
+    background-color: #FDF5F2;
+    /* warna awal */
+    position: relative;
+    /* penting agar dropdown anak bisa absolute dari sini */
+    z-index: 10;
 }
 
+
 .logo {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Hamburger button styling */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #803542;
 }
 
 .nav-links {
     display: flex;
-    gap: 15px;
+    gap: 30px;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.nav-links li {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .nav-links a {
     text-decoration: none;
-    font-size: 16px;
-    color: black;
+    color: #803542;
+    font-weight: bold; /* Teks jadi bold */
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    background-color: transparent; /* Hilangkan background warna */
 }
 
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
 
-.checkout-container {
-    margin-top: 120px;
-    display: flex;
-    gap: 20px;
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    width: 90%;
-    max-width: 1200px;
-    box-sizing: border-box;
-    justify-content: space-between;
-}
-
-.section {
-    width: calc(33.33% - 20px);
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #e57387;
-    border-radius: 8px;
-    font-size: 14px;
-}
-
-.delivery-options button {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: 0.3s;
-    font-size: 14px;
-}
-
-.delivery-options .active {
-    background: #e57387;
-    color: white;
-}
-
-.checkout-btn {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    background: #ff5f57;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.checkout-btn:hover {
-    background: #872f2f;
-}
-
-.order-item img {
-    width: 80px;
-    height: auto;
-    border-radius: 5px;
-}
-
-.confirmation-container {
-    text-align: center;
-    padding: 40px 20px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    margin-top: 140px;
-    max-width: 600px;
-}
-
-.progress-bar {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    color: orange;
-}
-
-.success-icon {
-    font-size: 60px;
-    color: orange;
-}
-
-.continue-btn {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 8px;
-    background: orange;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-}
-
+/* Responsive dropdown menu */
 @media (max-width: 768px) {
-    .checkout-container {
-        flex-direction: column;
-        padding: 20px;
-        margin-top: 140px;
-        width: 95%;
-    }
-
-    .section {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .form-group input {
-        padding: 10px;
-        font-size: 12px;
-    }
-
-    .delivery-options button {
-        padding: 10px 15px;
-        font-size: 12px;
-    }
-
-    .checkout-btn {
-        padding: 12px;
-        font-size: 14px;
-    }
-
     .hamburger {
         display: block;
     }
 
     .nav-links {
-        display: none;
-        flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 20px;
-        background: white;
+        right: 10px;
+        background-color: rgba(248, 230, 233, 0.95);
+        flex-direction: column;
         padding: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 180px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        pointer-events: none;
+        gap: 15px;
     }
 
     .nav-links.active {
-        display: flex;
-    }
-
-    .order-item img {
-        width: 60px;
-    }
-
-    .confirmation-container {
-        margin-top: 100px;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
 }
+
+.search-container {
+  position: relative;
+}
+
+/* --- SEARCH BAR --- */
+.search-wrapper {
+    background-color: #FDF5F2;
+    padding: 0.5rem 2rem; /* Ubah padding atasnya */
+    margin-top: -5px; /* Tambahkan ini */
+
+}
+
+.search-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+
+.search-btn {
+    background-color: #b33a30;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #850e35;
+  display: block;
+  border-radius: 3px;
+} */
+
+/* Shopping Cart Styles */
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.cart-left {
+  flex: 1;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.cart-item img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.item-details p {
+  margin: 5px 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #850e35;
+}
+
+.move-fav {
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #850e35;
+}
+
+.item-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.item-actions input {
+  width: 50px;
+  padding: 4px;
+}
+
+.remove {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+}
+
+.cart-summary {
+    width: 320px;
+    background-color: #f2dce2;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 50px; /* Tambahkan ini untuk menurunkan */
+  }
+  
+
+.cart-summary h3 {
+  margin-top: 0;
+}
+
+.cart-summary input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.summary-line, .summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.summary-total {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.paypal-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #ffc4c4;
+  color: #00457c;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.see-also {
+    margin-top: 50px;
+    padding: 20px;
+    /* background-color: #fff; */
+    text-align: center;
+}
+
+.see-also h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #B33A30;
+}
+
+.see-also .related-products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.see-also .related-products img {
+    width: 250px; /* Ukuran kotak tetap */
+    height: 250px; /* Ukuran kotak tetap */
+    object-fit: cover;
+    /* border-radius: 10px; */
+    transition: transform 0.3s ease;
+}
+
+.see-also .related-products img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    border: 2px solid #D1776A;
+}
+
+/* RESPONSIVE UNTUK TABLET DAN MOBILE */
+
+@media (max-width: 1024px) {
+    .cart-container {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+  
+    .cart-summary {
+      width: 100%;
+    }
+  
+    .search-container {
+        gap: 5px;
+      }
+    
+      .search-container input {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+      }
+    
+      .search-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+      }
+    .nav-links {
+      margin-right: 0;
+    }
+  
+    .see-also .related-products {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .cart-item img {
+      margin-bottom: 10px;
+    }
+  
+    .item-actions {
+      align-self: stretch;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .see-also .related-products {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .see-also .related-products img {
+      width: 80%;
+      max-width: 300px;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding: 20px;
+    }
+  
+    .navbar {
+      padding: 1rem;
+    }
+  
+    .logo {
+      font-size: 1.2rem;
+    }
+  
+    .cart-summary {
+      padding: 15px;
+    }
+  
+    .checkout-btn,
+    .paypal-btn {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .see-also h3 {
+      font-size: 1.2em;
+    }
+  }
+  

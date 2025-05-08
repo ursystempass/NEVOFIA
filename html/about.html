@@ -4,80 +4,198 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NÉVOFIA</title>
-    <link rel="stylesheet" href="/NEVOFIA/css/about.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/NEVOFIA/css/about.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo">NÉVOFIA</div>
-      <button class="hamburger">&#9776;</button>
-      <ul class="nav-links">
-          <li><a href="/NEVOFIA/html/about.html">About Us</a></li>
-          <li><a href=/NEVOFIA/html/contact.html>Contact us</a></li>
-          <li><a href="/NEVOFIA/html/login.html" class="login-link">Login</a></li>
-      </ul>
-  </nav>  
-    <section class="hero">
-      <h1>
-        <span class="about">ABOUT</span><br />
-        <span class="us">US</span>
-      </h1>
-      <img src="/NEVOFIA/project-folder/image/model 4.jpg" alt="Hero Image">
-    </section>
-    <section class="best-product-container">
-      <div class="best-product-wrapper">
-          <section class="best-product">
-              <h2>THE BEST PRODUCT</h2>
-              <div class="product-list">
-                  <div class="product-item">
-                      <img src="/NEVOFIA/project-folder/image/organics 1.jpg" alt="lip 11" />
-                      <p class="product-name">Organic Lip Balm</p>
-                  </div>
-                  <div class="product-item">
-                      <img src="/NEVOFIA/project-folder/image/organics 2.jpg" alt="lip 12" />
-                      <p class="product-name">Hydrating Lip Oil</p>
-                  </div>
-                  <div class="product-item">
-                      <img src="/NEVOFIA/project-folder/image/organics.jpg" alt="Product 3" />
-                      <p class="product-name">Nourishing Lip Butter</p>
-                  </div>
-              </div>
-          </section>
-      </div>
-  </section>
-  
-    <section class="phyloshopy">
-      <img src="/NEVOFIA/project-folder/image/model 5.jpg" alt="Phylosophy Image">
-      <div class="text">
-          <h3>OUR <span>NÉVOFIA</span></h3>
-          <p> NÉVOFIA is your ultimate beauty destination, designed exclusively 
-              for makeup and skincare lovers. We bring you high-quality products 
-              from top brands, ensuring every step of your beauty routine is 
-              effortless and flawless. Explore, discover, and enjoy the best 
-              beauty shopping experience with us!.</p>
-      </div>
-    </section>
-  
-    <section class="mission">
-        <div class="text">
-            <h3>
-                <span>OUR</span><br>
-                <span>MISSION</span>
-            </h3>
-            <p>
-                Our mission is to make beauty accessible and enjoyable for everyone. 
-              We aim to provide a seamless shopping experience with carefully 
-              curated products that cater to all skin types and beauty preferences. 
-              At NÉVOFIA, we believe that beauty is a journey, and we’re here to 
-              help you shine in every step of the way.
-            </p>
+    <header>
+      <nav class="navbar">
+        <div class="brand-name">NÉVOFIA</div>
+        <div class="nav-links" id="navLinks">
+          <a href="/NEVOFIA/html/about.html">
+            <i class="fa-regular fa-user"></i>
+            <span class="label">About Us</span>
+          </a>
+          <a href="/NEVOFIA/html/contact.html">
+            <i class="fa-regular fa-envelope"></i>
+            <span class="label">Contact Us</span>
+          </a>
+          <a href="/NEVOFIA/html/login.html">
+            <i class="fa-regular fa-right-to-bracket"></i>
+            <span class="label">Login</span>
+          </a>
+          <div class="mode-switch">
+            <input type="checkbox" id="modeToggle" />
+            <label for="modeToggle" class="switch">
+              <span class="slider"></span>
+              <!-- Ikon untuk siang dan malam -->
+              <i class="fa-solid fa-sun" id="sunIcon"></i>
+              <i class="fa-solid fa-moon" id="moonIcon"></i>
+            </label>
+          </div>
+          
         </div>
-        <img src="/NEVOFIA/project-folder/image/model 6.jpg" alt="Model" />
+        <button class="hamburger" id="hamburger">☰</button>
+      </nav>
+
+    <section class="hero-carousel">
+      <div class="hero-slide active">
+        <div class="hero-image">
+          <img src="/NEVOFIA/project-folder//image/heroa.jpg" alt="Slide 1" />
+        </div>
+        <div class="hero-text right">
+          <div class="text-wrapper">
+            <h2>PURE SERENITY</h2>
+            <h1>Feel the Calm in Every Authentic Detail</h1>
+            <p>
+              At NÉVOFIA, every product is chosen to bring a sense of clarity, trust, and comfort—where real beauty begins with gentle honesty and peace of mind.
+            </p>
+            <div class="fragrance-label">
+              <span>Original</span><span>Trusted</span><span>Peaceful</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="hero-slide">
+        <div class="hero-text left">
+          <div class="text-wrapper">
+            <h2>EMPATHETIC CARE</h2>
+            <h1>Your Warm Companion, Always</h1>
+            <p>
+              We’re here not just as a brand, but as a presence—ready to listen, respond, and uplift with heartfelt attention and grace.
+            </p>
+            <div class="fragrance-label">
+              <span>Kind</span><span>Fast</span><span>Supportive</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/NEVOFIA/project-folder/image/heroa1.jpg" alt="Slide 2" />
+        </div>
+      </div>
+    
+      <div class="hero-slide">
+        <div class="hero-image">
+          <img src="/NEVOFIA/project-folder/image/heroa2.jpg" alt="Slide 3" />
+        </div>
+        <div class="hero-text right">
+          <div class="text-wrapper">
+            <h2>OUR LIGHT</h2>
+            <h1>Guided by Clarity, Moving with Intention</h1>
+            <p>
+              Our mission is to be a source of ease and purpose, where every interaction shines with care, and every product nurtures your quiet confidence.
+            </p>
+            <div class="fragrance-label">
+              <span>Dedicated</span><span>Experienced</span><span>Authentic</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <script src="/js/about.js"></script>
-    <footer class="footer">
-      <p>&copy; 2025 Névofia. All Rights Reserved.</p>
-  </footer>
-  
+    <section class="intro-text">
+      <h2>A Vision of Excellence and Innovation</h2>
+    </section>
+    
+
+    <!-- <section class="phyloshopy">
+      <img src="/NEVOFIA/project-folder/image/phy.jpg" alt="Philosophy Image" />
+      <div class="text">
+        <h3>Our Philosophy</h3>
+        <p>
+          We believe beauty should never feel rushed or forced. At NÉVOFIA, we embrace the essence of stillness—offering gentle rituals that bring balance and thoughtful presence into your daily life.
+        </p>
+      </div>
+    </section>
+    
+    <section class="mission">
+      <div class="text">
+        <h3>Our Mission</h3>
+        <p>
+          To create a peaceful space where you can explore beauty without pressure. Through curated care, we aim to inspire warmth, serenity, and genuine connection—with products that speak softly and lovingly to your soul.
+        </p>
+      </div>
+      <img src="/NEVOFIA/project-folder/image/mission.jpg" alt="Mission Image" />
+    </section>
+     -->
+     <section class="phyloshopy">
+      <img src="/NEVOFIA/project-folder/image/phy.jpg" alt="Philosophy Image" />
+      <div class="text">
+        <h3>Our Philosophy</h3>
+        <p>
+          We believe beauty should never feel rushed or forced. At NÉVOFIA, we embrace the essence of stillness—offering gentle rituals that bring balance and thoughtful presence into your daily life.
+        </p>      </div>
+    </section>
+    
+    <section class="mission">
+      <div class="text">
+        <h3>Our Mission</h3>
+        <p>
+          To create a peaceful space where you can explore beauty without pressure. Through curated care, we aim to inspire warmth, serenity, and genuine connection—with products that speak softly and lovingly to your soul.
+        </p>      </div>
+      <img src="/NEVOFIA/project-folder/image/mission.jpg" alt="Mission Image" />
+    </section>
+    
+<!--     
+    <section class="mission">
+      <img src="/NEVOFIA/project-folder/image/mission.jpg" alt="Mission Image" />
+      <div class="text">
+        <h3>Our Mission</h3>
+        <p>
+          To create a peaceful space where you can explore beauty without pressure. Through curated care, we aim to inspire warmth, serenity, and genuine connection—with products that speak softly and lovingly to your soul.
+        </p>
+      </div>
+    </section> -->
+    
+    <script src="/NEVOFIA/js/about.js"></script>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h2>NÉVOFIA</h2>
+        </div>
+        
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="#">All Products</a></li>
+              <li><a href="#">Best Sellers</a></li>
+              <li><a href="#">New Arrivals</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>About</h4>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Philosophy</a></li>
+              <li><a href="#">Team</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 NÉVOFIA. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

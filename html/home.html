@@ -1,35 +1,41 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NÉVOFIA</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/NEVOFIA/css/home.css" />
+    <script defer src="/NEVOFIA/js/home.js"></script>
   </head>
+
   <body>
     <header>
       <nav class="navbar">
-        <div class="brand-name">NÉVOFIA</div>
-        <div class="nav-links" id="navLinks">
-        <a href="/NEVOFIA/html/basket.html" class="cart-icon">🛒</a>
-        <a href="/NEVOFIA/html/about.html">About Us</a>
-        <a href="/NEVOFIA/html/contact.html">Contact Us</a>
-        </div>
-        <button class="hamburger" id="hamburger">
-          ☰
-        </button>
+        <div class="logo">NÉVOFIA</div>
+
+        <button class="hamburger" id="hamburger">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
       </nav>
     </header>
-    
     <section class="hero">
-      <img src="/NEVOFIA/project-folder/image/apple.jpeg" alt="Hero Image" />
-      <div class="promo-overlay">
-        <img src="/NEVOFIA/project-folder/image/lip 1.jpeg" alt="Promo Product" />
-      </div>
+      <img src="/NEVOFIA/project-folder/image/heroa1.jpg" alt="Hero Image" />
     </section>
     <section class="categories-container">
       <div class="categories">
-       <a href="/NEVOFIA/html/product 1.html"><button>Skincare</button></a>
+        <a href="/NEVOFIA/html/product 1.html"><button>Skincare</button></a>
         <a href="/NEVOFIA/html/product 2.html"><button>Make Up</button></a>
       </div>
       <div class="search-bar">
@@ -37,35 +43,52 @@
         <button class="search-btn">🔍</button>
       </div>
     </section>
-    <section class="product-list">
-      <a href="/NEVOFIA/html/desc 1.html" class="product-item">
-          <img src="/NEVOFIA/project-folder/image/blush 2.jpg" alt="Product 1">
-          <p class="product-name">Apple</p>
-          <p class="product-price">$5.00</p>
-      </a>
-      <a href="/NEVOFIA/html/desc 2.html" class="product-item">
-          <img src="/NEVOFIA/project-folder/image/organics.jpg" alt="Product 2">
-          <p class="product-name">Orange</p>
-          <p class="product-price">$4.00</p>
-      </a>
-      <a href="/NEVOFIA/html/desc 3.html" class="product-item">
-          <img src="/NEVOFIA/project-folder/image/tavi.jpg" alt="Product 3">
-          <p class="product-name">Banana</p>
-          <p class="product-price">$3.00</p>
-      </a>
-  </section>
-  
-    <section class="gallery-container">
-        <button class="gallery-btn prev">❮</button>
-        <div class="gallery"></div>
-        <button class="gallery-btn next">❯</button>
-    </section>
-    <section class="featured-products"></section>
 
-    <script src="/js/home.js"></script>
-    <footer class="footer">
-      <p>&copy; 2025 Névofia. All Rights Reserved.</p>
-  </footer>
-  
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h2>NÉVOFIA</h2>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="#">All Products</a></li>
+              <li><a href="#">Best Sellers</a></li>
+              <li><a href="#">New Arrivals</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>About</h4>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Philosophy</a></li>
+              <li><a href="#">Team</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 NÉVOFIA. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

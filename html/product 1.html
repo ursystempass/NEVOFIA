@@ -1,147 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NÉVOFIA</title>
-    <link rel="stylesheet" href="/css/product 1.css" />
-  </head>
 
-  <body>
-    <div class="header-container">
-      <nav class="navbar">
-        <h1 class="skincare-title">Skincare</h1>
-        <button class="hamburger">☰</button>
-        <ul class="nav-links">
-            <a href="/html/basket.html" class="cart-icon">🛒</a>
-            <a href="/html/home.html">Home</a>
-            <a href="/html/about.html">About Us</a>
-            <li><a href="/html/contact.html">Contact us</a></li>
-        </ul>
-      </nav>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NÉVOFIA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/NEVOFIA/css/product 1.css" />
+  <script defer src="/NEVOFIA/js/product.js"></script>
+</head>
 
-    <div class="search-bar">
-      <input type="text" placeholder="Cari produk..." class="search-input" />
-      <button class="search-btn">Cari</button>
-    </div>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand-name">NÉVOFIA</div>
+      <div class="nav-links" id="navLinks">
+        <a href="/NEVOFIA/html/about.html">
+          <i class="fa-regular fa-user"></i>
+          <span class="label">About Us</span>
+        </a>
+        <a href="/NEVOFIA/html/contact.html">
+          <i class="fa-regular fa-envelope"></i>
+          <span class="label">Contact Us</span>
+        </a>
+        <a href="/NEVOFIA/html/login.html">
+          <i class="fa-regular fa-right-to-bracket"></i>
+          <span class="label">Login</span>
+        </a>
+        <div class="mode-switch">
+          <input type="checkbox" id="modeToggle" />
+          <label for="modeToggle" class="switch">
+            <span class="slider"></span>
+            <!-- Ikon untuk siang dan malam -->
+            <i class="fa-solid fa-sun" id="sunIcon"></i>
+            <i class="fa-solid fa-moon" id="moonIcon"></i>
+          </label>
+        </div>
 
-    <div class="main-content">
-      <div class="filter-bar">
-        <button class="filter-btn" data-filter="related">Terkait</button>
-        <button class="filter-btn" data-filter="newest">Terbaru</button>
-        <button class="filter-btn" data-filter="bestseller">Terlaris</button>
-        <button class="filter-btn" data-filter="favorite">Favorit</button>
       </div>
+      <button class="hamburger" id="hamburger">☰</button>
+    </nav>
 
-      <div class="product-grid" id="product-grid">
+    <!-- Search bar di bawah navbar -->
+    <div class="search-wrapper">
+      <div class="search-container">
+        <input type="text" placeholder="Cari produk..." />
+        <button class="search-btn">Cari</button>
       </div>
-
-      <p class="footer-text">Sudah menampilkan semua produk</p>
     </div>
+    <div class="category-shortcuts">
+      <button class="category-btn" data-filter="all">Semua</button>
+      <button class="category-btn" data-filter="terbaru">Terbaru</button>
+      <button class="category-btn" data-filter="terlaris">Terlaris</button>
+      <button class="category-btn" data-filter="terkait">Terkait</button>
+    </div>
+    
+    
+    <div class="product-grid">
+      <div class="product-card" data-sold="150" data-category="terlaris">
+        <img src="/NEVOFIA/project-folder/image/che1.jpg" alt="Produk 1">
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 200</p>
+      </div>      
+      <div class="product-card" data-sold="150" data-category="terbaru">
+        <img src="/NEVOFIA/project-folder/image/che2.jpg" alt="Produk 1">
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 10</p>
+      </div>
+      <div class="product-card" data-sold="150" data-category="terbaru">
+        <img src="/NEVOFIA/project-folder/image/see1 (1).jpg" alt="Produk 1">
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 20</p>
+      </div>
+      <div class="product-card" data-sold="150" data-category="terkait terbaru terlaris"      >
+        <img src="/NEVOFIA/project-folder/image/see1 (2).jpg" alt="Produk 1">
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 166</p>
+      </div>
+      <div class="product-card" data-sold="150" data-category="terlaris">
+        <img src="/NEVOFIA/project-folder/image/see1 (1).jpg" alt="Produk 1">
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 150</p>
+      </div>
+      <div class="product-card" data-sold="150" data-category="terkait">
+        <img src="/NEVOFIA/project-folder/image/see1 (1).jpg" alt="Produk 1">
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 70</p>
+      </div>
+      
+    </div>
+    
+    
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h2>NÉVOFIA</h2>
+        </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const productGrid = document.getElementById("product-grid");
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="#">All Products</a></li>
+              <li><a href="#">Best Sellers</a></li>
+              <li><a href="#">New Arrivals</a></li>
+            </ul>
+          </div>
 
-        // Data produk (setiap produk memiliki detail unik)
-        const products = [
-          {
-            image: "/project-folder/image/masker.jpg",
-            name: "SKINTIFIC Masker Wajah",
-            price: "Rp 74.700",
-            rating: "★★★★★",
-            date: new Date(2025, 2, 22),
-            sold: 880
-          },
-          {
-            image: "/project-folder/image/micellar.jpg",
-            name: "GARNIER Micellar Cleansing Water",
-            price: "Rp 29.000",
-            rating: "★★★★☆",
-            date: new Date(2025, 2, 20),
-            sold: 890
-          },
-          { 
-            image: "/project-folder/image/mois emina.jpg",
-            name: "EMINA Water Gel Moisturazer",
-            price: "Rp 37.000",
-            rating: "★★★★☆",
-            date: new Date(2025, 2, 18),
-            sold: 1200
-          },
-          {
-            image: "/project-folder/image/sabun.jpg",
-            name: "Glad2Glow Milk Cleanser",
-            price: "Rp 46.000",
-            rating: "★★★★☆",
-            date: new Date(2025, 2, 15),
-            sold: 2000
-          },
-          {
-            image: "/project-folder/image/toner.jpg",
-            name: "SKINTIFIC Pure Centela",
-            price: "Rp 81.000",
-            rating: "★★★★★",
-            date: new Date(2025, 2, 10),
-            sold: 200
-          }
-        ];
+          <div class="footer-column">
+            <h4>About</h4>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Philosophy</a></li>
+              <li><a href="#">Team</a></li>
+            </ul>
+          </div>
 
-        // Fungsi untuk menampilkan produk
-        function renderProducts(products) {
-          productGrid.innerHTML = "";
-          products.forEach(product => {
-            const productCard = document.createElement("div");
-            productCard.className = "product-card";
-            productCard.innerHTML = `
-              <img src="${product.image}" alt="${product.name}">
-              <p class="product-name">${product.name}</p>
-              <p class="product-price">${product.price}</p>
-              <p class="rating">${product.rating}</p>
-              <p class="product-date">Tanggal: ${product.date.toLocaleDateString()}</p>
-              <p class="product-sold">${product.sold} Terjual</p>
-            `;
-            productGrid.appendChild(productCard);
-          });
-        }
+          <div class="footer-column">
+            <h4>Help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+            </ul>
+          </div>
+        </div>
 
-        // Render awal produk
-        renderProducts(products);
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
 
-        // Filter produk berdasarkan kategori
-        const filterButtons = document.querySelectorAll(".filter-btn");
-        filterButtons.forEach(button => {
-          button.addEventListener("click", () => {
-            const filter = button.getAttribute("data-filter");
-            let filteredProducts = [...products];
+        <div class="footer-bottom">
+          <p>&copy; 2025 NÉVOFIA. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+</body>
 
-            switch (filter) {
-              case "newest":
-                filteredProducts.sort((a, b) => b.date - a.date);
-                break;
-              case "bestseller":
-                filteredProducts.sort((a, b) => b.sold - a.sold);
-                break;
-              case "favorite":
-                filteredProducts = filteredProducts.filter(p => p.rating === "★★★★★");
-                break;
-              default:
-                filteredProducts = products;
-            }
-
-            renderProducts(filteredProducts);
-          });
-        });
-
-        // Toggle navigasi
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-
-        hamburger.addEventListener("click", () => {
-          navLinks.classList.toggle("active");
-        });
-      });
-    </script>
-  </body>
 </html>

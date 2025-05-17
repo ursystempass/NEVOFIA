@@ -15,14 +15,15 @@ body {
     padding: 10px 20px;
     background-color: transparent;
     position: relative;
+    z-index: 1000;
 }
 
-.logo {
+.brand-name {
     font-size: 45px;
     font-weight: bold;
     letter-spacing: 4px;
-    color: #803542; /* Warna wine */
-    /* Merah wine */
+    color: #803542;
+    /* wine red */
 }
 
 .hamburger {
@@ -31,57 +32,59 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+    color: #803542;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 20px;
-    padding: 0;
-}
-
-.nav-links li {
-    display: inline;
+    gap: 30px;
+    align-items: center;
+    margin-right: 40px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #b33a30;
-    /* Merah wine */
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-size: 16px;
+    text-decoration: none;
+    color: #803542;
     font-weight: bold;
-    padding: 5px 10px;
+    transition: color 0.3s;
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
-.login-link {
-    color: #b33a30;
-    /* Merah wine */
-    background: none;
-    padding: 0;
-    border-radius: 0;
-    font-weight: normal;
+.nav-links a i {
+    font-size: 20px;
+    transition: transform 0.3s;
 }
 
+.nav-links a .label {
+    display: none;
+}
+
+/* Dropdown mobile */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
     }
 
     .nav-links {
-        display: flex;
-        flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 20px;
-        background-color: rgba(255, 255, 255, 0.9);
+        right: 10px;
+        background-color: rgba(248, 230, 233, 0.95);
+        flex-direction: column;
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        width: 150px;
+        width: 180px;
         opacity: 0;
         transform: translateY(-10px);
         transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
         pointer-events: none;
+        gap: 15px;
     }
 
     .nav-links.active {
@@ -89,7 +92,22 @@ body {
         transform: translateY(0);
         pointer-events: auto;
     }
+
+    .nav-links a {
+        justify-content: flex-start;
+    }
+
+    .nav-links a i {
+        display: none;
+    }
+
+    .nav-links a .label {
+        display: inline;
+    }
 }
+
+
+
 
 .hero {
     display: flex;
@@ -610,6 +628,7 @@ body {
 }
 
 @media (max-width: 480px) {
+
     .product-card,
     .brand-card {
         width: 90%;

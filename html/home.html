@@ -9,6 +9,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
@@ -19,15 +24,23 @@
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">NÉVOFIA</div>
-
+        <div class="brand-name">NÉVOFIA</div>
+        <div class="nav-links" id="navLinks">
+          <a href="/NEVOFIA/html/basket.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="label">Cart</span>
+          </a>
+          <a href="/NEVOFIA/html/about.html">
+            <i class="fa-regular fa-user"></i>
+            <span class="label">About Us</span>
+          </a>
+          <a href="/NEVOFIA/html/contact.html">
+            <i class="fa-regular fa-envelope"></i>
+            <span class="label">Contact Us</span>
+          </a>
+          <div class="mode-switch"></div> 
+        </div>
         <button class="hamburger" id="hamburger">☰</button>
-
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
       </nav>
     </header>
     <section class="hero">
@@ -35,14 +48,84 @@
     </section>
     <section class="categories-container">
       <div class="categories">
-        <a href="/NEVOFIA/html/product 1.html"><button>Skincare</button></a>
-        <a href="/NEVOFIA/html/product 2.html"><button>Make Up</button></a>
+        <a href="/NEVOFIA/html/skincare.html"><button>Skincare</button></a>
+        <a href="/NEVOFIA/html/makeup.html"><button>Make Up</button></a>
       </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search products..." />
-        <button class="search-btn">🔍</button>
+      <div class="search-wrapper">
+  <div class="search-container">
+    <input type="text" placeholder="Cari produk..." />
+    <button class="search-btn">Cari</button>
+  </div>
+</div>
+
+    </section>
+    <div class="product-grid">
+      <div class="product-card" data-sold="150" data-category="terlaris">
+        <img src="/NEVOFIA/project-folder/image/che1.jpg" alt="Produk 1" />
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 200</p>
+      </div>
+      <div class="product-card" data-sold="150" data-category="terlaris">
+        <img src="/NEVOFIA/project-folder/image/see1 (1).jpg" alt="Produk 1" />
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 150</p>
+      </div>
+      <div class="product-card" data-sold="150" data-category="terkait">
+        <img src="/NEVOFIA/project-folder/image/see1 (1).jpg" alt="Produk 1" />
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 70</p>
+      </div>
+    </div>
+
+    <section class="promo-slider-section">
+      <h2 class="promo-title">PROMO TERBARU</h2>
+      <div class="promo-slider">
+        <div class="promo-slide">
+          <img src="/NEVOFIA/project-folder/image/heroa.jpg" alt="Promo 1" />
+          <p class="promo-caption">Glow Booster Serum</p>
+        </div>
+        <div class="promo-slide">
+          <img src="/NEVOFIA/project-folder/image/heroa1.jpg" alt="Promo 2" />
+          <p class="promo-caption">Moist Lip Tint</p>
+        </div>
+        <div class="promo-slide">
+          <img src="/NEVOFIA/project-folder/image/heroa2.jpg" alt="Promo 3" />
+          <p class="promo-caption">Silky Hydration Cream</p>
+        </div>
+        <div class="promo-slide">
+          <img src="/NEVOFIA/project-folder/image/phy.jpg" alt="Promo 4" />
+          <p class="promo-caption">Daily Defense Sunscreen</p>
+        </div>
+        <div class="promo-slide">
+          <img src="/NEVOFIA/project-folder/image/phy.jpg" alt="Promo 5" />
+          <p class="promo-caption">Daily Defense Sunscreen</p>
+        </div>
       </div>
     </section>
+
+    <div class="product-grid">
+      <div class="product-card" data-sold="150" data-category="terlaris">
+        <img src="/NEVOFIA/project-folder/image/che1.jpg" alt="Produk 1" />
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 200</p>
+      </div>
+      <div class="product-card" data-sold="150" data-category="terlaris">
+        <img src="/NEVOFIA/project-folder/image/see1 (1).jpg" alt="Produk 1" />
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 150</p>
+      </div>
+      <div class="product-card" data-sold="150" data-category="terkait">
+        <img src="/NEVOFIA/project-folder/image/see1 (1).jpg" alt="Produk 1" />
+        <h3>Glow Serum</h3>
+        <p class="price">Rp120.000</p>
+        <p class="sold">Terjual: 70</p>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="footer-container">

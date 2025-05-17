@@ -6,124 +6,107 @@ body {
   color: #000; /* Warna teks utama */
 }
 
-/* Navbar Styles */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: transparent;
-  position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    position: relative;
+    z-index: 1000;
 }
 
-.logo {
-  font-size: 45px;
-  font-weight: bold;
-  letter-spacing: 4px;
-  color: #803542; /* Warna wine */
+.brand-name {
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #803542;
+    /* wine red */
 }
 
-/* Hamburger button */
 .hamburger {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #4B2B2D; /* teks netral gelap */
-}
-
-.navbar .hamburger.active {
-  color: #D6B4A5; /* warna krem lembut saat aktif */
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #803542;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-}
-
-.nav-links li {
-  text-decoration: none !important;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-right: 40px;
 }
 
 .nav-links a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 8px 0;
-  color: #803542;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  border-radius: 6px;
-  text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #803542;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
-.login-link {
-  color: black;
-  background: none;
-  padding: 0;
-  border-radius: 0;
-  font-weight: normal;
+.nav-links a i {
+    font-size: 20px;
+    transition: transform 0.3s;
 }
 
-/* Dropdown Animasi */
+.nav-links a .label {
+    display: none;
+}
+
 /* Dropdown mobile */
 @media (max-width: 768px) {
-  .hamburger {
-      display: block;
-  }
+    .hamburger {
+        display: block;
+    }
 
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background-color: rgba(248, 230, 233, 0.95);
-    flex-direction: column;
-    padding: 10px;
-    border-radius: 10px;
-    width: 180px;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-    pointer-events: none;
-    gap: 10px;
-    z-index: 1000; /* ⬅️ Tambahkan ini agar selalu di atas */
-  }
-  
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: rgba(248, 230, 233, 0.95);
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 180px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        pointer-events: none;
+        gap: 15px;
+    }
 
-  .nav-links.active {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-  }
+    .nav-links.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
 
-  .nav-links a {
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      font-size: 16px;
-      text-decoration: none;
-      color: #803542;
-      padding: 8px 0;
-      border-radius: 6px;
-      width: 100%;
-      display: flex;
-  }
+    .nav-links a {
+        justify-content: flex-start;
+    }
 
-  .nav-links a i {
-      display: none;
-  }
+    .nav-links a i {
+        display: none;
+    }
 
-  .nav-links a .label {
-      display: inline;
-      width: 100%;
-      text-align: center;
-  }
+    .nav-links a .label {
+        display: inline;
+    }
 }
+
+
+
+
 
 /* Tambahkan jarak antara navbar dan konten */
 .container {

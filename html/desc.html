@@ -4,26 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NÉVOFIA</title>
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="/NEVOFIA/css/desc.css" />
     <script defer src="/NEVOFIA/js/desc.js"></script>
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <div class="logo">NÉVOFIA</div>
-
+          <nav class="navbar">
+        <div class="brand-name">NÉVOFIA</div>
+        <div class="nav-links" id="navLinks">
+          <a href="/NEVOFIA/index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="label">Home</span>
+          </a>
+          <a href="/NEVOFIA/html/about.html">
+            <i class="fa-regular fa-address-card"></i>
+            <span class="label">About Us</span>
+          </a>
+          <a href="/NEVOFIA/html/contact.html">
+            <i class="fa-regular fa-envelope"></i>
+            <span class="label">Contact Us</span>
+          </a>
+        </div>
         <button class="hamburger" id="hamburger">☰</button>
-
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
       </nav>
-
-      <!-- Search bar di bawah navbar -->
       <div class="search-wrapper">
-        <div class="search-container">
+        <div class="search-container"> 
           <input type="text" placeholder="Cari produk..." />
           <button class="search-btn">Cari</button>
         </div>
@@ -128,15 +137,25 @@
       <section class="see-also">
         <h3>SEE ALSO</h3>
         <div class="related-products">
-            <img src="/NEVOFIA/project-folder/image/see1 (1).jpg" alt="Related Product 1" />
-            <img src="/NEVOFIA/project-folder/image/see1 (2).jpg" alt="Related Product 2" />
-            <img src="/NEVOFIA/project-folder/image/see1 (3).jpg" alt="Related Product 3" />
+          <img
+            src="/NEVOFIA/project-folder/image/see1 (1).jpg"
+            alt="Related Product 1"
+          />
+          <img
+            src="/NEVOFIA/project-folder/image/see1 (2).jpg"
+            alt="Related Product 2"
+          />
+          <img
+            src="/NEVOFIA/project-folder/image/see1 (3).jpg"
+            alt="Related Product 3"
+          />
         </div>
         <div class="see-more-container">
-            <a href="/lihat-selengkapnya.html" class="see-more-btn">Lihat Selengkapnya</a>
+          <a href="/lihat-selengkapnya.html" class="see-more-btn"
+            >Lihat Selengkapnya</a
+          >
         </div>
-    </section>
-    
+      </section>
     </main>
   </body>
 </html>

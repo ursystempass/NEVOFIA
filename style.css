@@ -8,6 +8,7 @@ body {
     /* Merah wine */
 }
 
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -105,7 +106,6 @@ body {
         display: inline;
     }
 }
-
 
 
 

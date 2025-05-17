@@ -139,14 +139,15 @@
         cursor: pointer;
     }
 
- .cart-container {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px;
-    margin: 30px auto; /* Tambahkan margin auto di kiri dan kanan */
-  }
+    .cart-container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        margin: 30px auto;
+        /* Tambahkan margin auto di kiri dan kanan */
+    }
 
     .store {
         display: flex;
@@ -485,60 +486,88 @@
     }
 
     /* RESPONSIF UNTUK CART */
-@media (max-width: 768px) {
-  .cart-container {
-    padding: 10px;
-  }
+    @media (max-width: 768px) {
+        .cart-container {
+            padding: 10px;
+        }
 
-  .product {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
+        .product {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
 
-  .product img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-  }
+        .product img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
 
-  .details {
-    width: 100%;
-  }
+        .details {
+            width: 100%;
+        }
 
-  .quantity-controls {
-    width: 100%;
-    justify-content: space-between;
-    gap: 10px;
-  }
+        .quantity-controls {
+            width: 100%;
+            justify-content: space-between;
+            gap: 10px;
+        }
 
-  .quantity-controls input {
-    width: 50px;
-  }
+        .quantity-controls input {
+            width: 50px;
+        }
 
-  .variation-select {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
+        .variation-select {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
 
-@media (max-width: 480px) {
-  .product img {
-    max-width: 100%;
-  }
+    /* Dropdown styling for product variation */
+    .variation-select {
+        background-color: rgba(248, 230, 233, 0.95);
+        /* Warna senada dengan dropdown navbar */
+        border: 1px solid #e6c4c4;
+        border-radius: 12px;
+        padding: 8px 12px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #803542;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+        outline: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        margin-top: 6px;
+        width: 100%;
+        max-width: 220px;
+    }
 
-  .details .name {
-    font-size: 1rem;
-  }
+    /* Hover & Focus effect */
+    .variation-select:hover,
+    .variation-select:focus {
+        border-color: #b33a30;
+        box-shadow: 0 0 8px rgba(179, 58, 48, 0.2);
+        background-color: rgba(253, 245, 242, 1);
+        /* Sedikit lebih terang saat hover */
+    }
 
-  .quantity-controls button {
-    padding: 4px 8px;
-    font-size: 14px;
-  }
+    @media (max-width: 480px) {
+        .product img {
+            max-width: 100%;
+        }
 
-  .quantity-controls input {
-    width: 40px;
-    font-size: 14px;
-  }
-}
+        .details .name {
+            font-size: 1rem;
+        }
+
+        .quantity-controls button {
+            padding: 4px 8px;
+            font-size: 14px;
+        }
+
+        .quantity-controls input {
+            width: 40px;
+            font-size: 14px;
+        }
+    }

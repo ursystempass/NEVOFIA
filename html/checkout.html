@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart</title>
+    <title>Keranjang Belanja</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="/NEVOFIA/css/checkout.css" />
     <script defer src="/NEVOFIA/js/checkout.js"></script>
-
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">NÉVOFIA</div>
-
+        <div class="brand-name">NÉVOFIA</div>
+        <div class="nav-links" id="navLinks">
+          <a href="/NEVOFIA/index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="label">Home</span>
+          </a>
+          <a href="/NEVOFIA/html/about.html">
+            <i class="fa-regular fa-address-card"></i>
+            <span class="label">About Us</span>
+          </a>
+          <a href="/NEVOFIA/html/contact.html">
+            <i class="fa-regular fa-envelope"></i>
+            <span class="label">Contact Us</span>
+          </a>
+        </div>
         <button class="hamburger" id="hamburger">☰</button>
-
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
       </nav>
-
-      <!-- Search bar di bawah navbar -->
       <div class="search-wrapper">
         <div class="search-container">
           <input type="text" placeholder="Cari produk..." />
@@ -33,16 +41,18 @@
 
     <div class="cart-container">
       <div class="cart-left">
-        <h2>Shopping cart</h2>
-        <!-- <p class="breadcrumb">Home > Bag > Backpacks > Cart</p> -->
+        <h2>Keranjang Belanja</h2>
 
         <div class="cart-item">
-          <img src="/NEVOFIA/project-folder/image/che1.jpg" alt="Mini backpack" />
+          <img
+            src="/NEVOFIA/project-folder/image/che1.jpg"
+            alt="Emina Bright Stuff Face Wash"
+          />
           <div class="item-details">
-            <h3>Mini backpack</h3>
-            <p>Backpack S Blue<br />Size S</p>
-            <p class="price">$250</p>
-            <p class="move-fav">Move to Favorites</p>
+            <h3>Emina Bright Stuff Face Wash</h3>
+            <p>Pembersih wajah untuk kulit cerah dan lembut<br />100ml</p>
+            <p class="price">Rp28.000</p>
+            <!-- <p class="move-fav">Pindahkan ke Favorit</p> -->
           </div>
           <div class="item-actions">
             <input type="number" value="1" min="1" />
@@ -51,12 +61,15 @@
         </div>
 
         <div class="cart-item">
-          <img src="/NEVOFIA/project-folder/image/che2.jpg" alt="Backpack Plum" />
+          <img
+            src="/NEVOFIA/project-folder/image/che2.jpg"
+            alt="Somethinc Niacinamide Serum"
+          />
           <div class="item-details">
-            <h3>Backpack Light Plum</h3>
-            <p>Plume Business<br />Size M</p>
-            <p class="price">$180</p>
-            <p class="move-fav">Move to Favorites</p>
+            <h3>Somethinc Niacinamide + Moisture Serum</h3>
+            <p>Serum untuk mencerahkan dan melembapkan<br />20ml</p>
+            <p class="price">Rp115.000</p>
+            <!-- <p class="move-fav">Pindahkan ke Favorit</p> -->
           </div>
           <div class="item-actions">
             <input type="number" value="1" min="1" />
@@ -66,31 +79,60 @@
       </div>
 
       <div class="cart-summary">
-        <h3>Order Summary</h3>
-        <input type="text" placeholder="Enter promo code / Gift certificate" />
-        <div class="summary-line">
-          <span>Subtotal</span><span>$430.00</span>
+        <h3>Ringkasan Pesanan</h3>
+        <input type="text" placeholder="Masukkan kode promo / voucher" />
+        <div class="payment-row">
+          <label for="payment-method">Metode Pembayaran:</label>
+          <select id="payment-method" name="payment-method">
+            <option value="bank">Transfer Bank</option>
+            <option value="ewallet">E-Wallet (OVO, DANA, GoPay)</option>
+            <option value="cod">Bayar di Tempat (COD)</option>
+          </select>
         </div>
-        <div class="summary-line"><span>Estimated Tax</span><span>—</span></div>
         <div class="summary-line">
-          <span>Estimated Shipping & Handling</span><span>$0.00</span>
+          <span>Subtotal</span><span>Rp143.000</span>
         </div>
-        <div class="summary-total"><span>Total</span><span>$430.00</span></div>
-        <button class="checkout-btn">Checkout</button>
-        <button class="paypal-btn">PayPal</button>
+        <div class="summary-line">
+          <span>Pajak Perkiraan</span><span>—</span>
+        </div>
+        <div class="summary-line">
+          <span>Ongkir & Penanganan</span><span>Rp0</span>
+        </div>
+        <div class="summary-total">
+          <span>Total</span><span>Rp143.000</span>
+        </div>
+        <button class="checkout-btn">Bayar Sekarang</button>
+      </div>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Pembayaran Berhasil!</h2>
+        <p>Terima kasih sudah berbelanja di NÉVOFIA.</p>
       </div>
     </div>
 
     <section class="see-also">
-      <h3>SEE ALSO</h3>
+      <h3>PRODUK LAINNYA</h3>
       <div class="related-products">
-          <img src="/NEVOFIA/project-folder/image/see1 (1).jpg" alt="Related Product 1" />
-          <img src="/NEVOFIA/project-folder/image/see1 (2).jpg" alt="Related Product 2" />
-          <img src="/NEVOFIA/project-folder/image/see1 (3).jpg" alt="Related Product 3" />
+        <img
+          src="/NEVOFIA/project-folder/image/see1 (1).jpg"
+          alt="Wardah C-Defense Serum"
+        />
+        <img
+          src="/NEVOFIA/project-folder/image/see1 (2).jpg"
+          alt="Make Over Powerstay Foundation"
+        />
+        <img
+          src="/NEVOFIA/project-folder/image/see1 (3).jpg"
+          alt="Azarine Tone Up Sunscreen"
+        />
       </div>
       <div class="see-more-container">
-          <a href="/lihat-selengkapnya.html" class="see-more-btn">Lihat Selengkapnya</a>
+        <a href="/lihat-selengkapnya.html" class="see-more-btn"
+          >Lihat Selengkapnya</a
+        >
       </div>
-  </section>
+    </section>
   </body>
 </html>

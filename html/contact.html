@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NÉVOFIA</title>
-    <link rel="stylesheet" href="/NEVOFIA/css/contact.css">
+    <link rel="stylesheet" href="/NEVOFIA/css/contact.css" />
     <script defer src="/NEVOFIA/js/contact.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="logo">NÉVOFIA</div>
-        <button class="hamburger" id="hamburger">&#9776;</button>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="/NEVOFIA/html/about.html">About Us</a></li>
-            <li><a href="/NEVOFIA/html/contact.html">Contact us</a></li>
-            <li><a href="/NEVOFIA/html/login.html" class="login-link">Login</a></li>
-        </ul>
+      <div class="brand-name">NÉVOFIA</div>
+      <div class="nav-links" id="navLinks">
+        <a href="/NEVOFIA/index.html">
+          <i class="fa-solid fa-house"></i>
+          <span class="label">Home</span>
+        </a>
+        <a href="/NEVOFIA/html/about.html">
+          <i class="fa-regular fa-address-card"></i>
+          <span class="label">About Us</span>
+        </a>
+        <!-- <a href="/NEVOFIA/html/contact.html">
+          <i class="fa-regular fa-envelope"></i>
+          <span class="label">Contact Us</span>
+        </a> -->
+        <!-- <a href="/NEVOFIA/html/login.html">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <span class="label">Login</span>
+        </a> -->
+      </div>
+      <button class="hamburger" id="hamburger">☰</button>
     </nav>
-    
+
     <div class="container">
-        <h1>Contact Us</h1>
+      <h1>Contact Us</h1>
 
-        <div class="content">
-            <div class="right">
-                <form>
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="E-mail">
-                    <textarea placeholder="Message"></textarea>
-                    <button type="submit">Contact Us</button>
-                </form>
+      <div class="content">
+        <div class="right">
+          <form>
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="E-mail" />
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Contact Us</button>
+          </form>
 
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <p>Contact</p>
-                        <p>nevofia@email.com</p>
-                    </div>
-                    <div class="location-info">
-                        <p>Based in</p>
-                        <p>San Francisco, California</p>
-                    </div>
-                </div>
-                <div class="social-icons">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-twitter"></i>
-                </div>                
+          <div class="contact-container">
+            <div class="contact-info">
+              <p>Contact</p>
+              <p>nevofia@email.com</p>
             </div>
+            <div class="location-info">
+              <p>Based in</p>
+              <p>San Francisco, California</p>
+            </div>
+          </div>
+          <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
         </div>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

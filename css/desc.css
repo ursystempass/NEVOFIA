@@ -10,22 +10,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #FDF5F2;
-    /* warna awal */
+    padding: 10px 20px;
+    background-color: transparent;
     position: relative;
-    /* penting agar dropdown anak bisa absolute dari sini */
-    z-index: 10;
+    z-index: 1000;
 }
 
-
-.logo {
-    font-size: 1.5rem;
+.brand-name {
+    font-size: 45px;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 4px;
+    color: #803542;
+    /* wine red */
 }
 
-/* Hamburger button styling */
 .hamburger {
     display: none;
     font-size: 24px;
@@ -42,20 +40,29 @@ body {
     margin-right: 40px;
 }
 
-.nav-links li {
-    list-style: none;
-}
-
 .nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
     text-decoration: none;
     color: #803542;
-    font-weight: 500;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    background-color: #f4d6d9;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
-/* Responsive dropdown menu */
+.nav-links a i {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.nav-links a .label {
+    display: none;
+}
+
+/* Dropdown mobile */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -83,7 +90,22 @@ body {
         transform: translateY(0);
         pointer-events: auto;
     }
+
+    .nav-links a {
+        justify-content: flex-start;
+    }
+
+    .nav-links a i {
+        display: none;
+    }
+
+    .nav-links a .label {
+        display: inline;
+    }
 }
+
+
+
 
 /* --- SEARCH BAR --- */
 .search-wrapper {
@@ -419,3 +441,4 @@ body {
         height: auto;
     }
 }
+

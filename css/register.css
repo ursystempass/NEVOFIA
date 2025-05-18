@@ -2,8 +2,10 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #FDF5F2; /* Latar krem terang */
-  color: #000; /* Warna teks utama */
+  background-color: #FDF5F2;
+  /* Latar krem terang */
+  color: #000;
+  /* Warna teks utama */
 }
 
 .navbar {
@@ -23,86 +25,103 @@ body {
     letter-spacing: 4px;
     color: #803542;
     /* wine red */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  position: relative;
+  z-index: 1000;
+}
+
+.brand-name {
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #803542;
+  font-family: 'Poppins', sans-serif;
+
+  /* wine red */
 }
 
 .hamburger {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #803542;
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #803542;
 }
 
 .nav-links {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    margin-right: 40px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-right: 40px;
 }
 
 .nav-links a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 16px;
-    text-decoration: none;
-    color: #803542;
-    font-weight: bold;
-    transition: color 0.3s;
-    padding: 6px 10px;
-    border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #803542;
+  font-weight: bold;
+  transition: color 0.3s;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
 .nav-links a i {
-    font-size: 20px;
-    transition: transform 0.3s;
+  font-size: 20px;
+  transition: transform 0.3s;
 }
 
 .nav-links a .label {
-    display: none;
+  display: none;
 }
 
 /* Dropdown mobile */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
+  .hamburger {
+    display: block;
+  }
 
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: rgba(248, 230, 233, 0.95);
-        flex-direction: column;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        width: 180px;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-        pointer-events: none;
-        gap: 15px;
-    }
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: rgba(248, 230, 233, 0.95);
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    pointer-events: none;
+    gap: 15px;
+  }
 
-    .nav-links.active {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
+  .nav-links.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
-    .nav-links a {
-        justify-content: flex-start;
-    }
+  .nav-links a {
+    justify-content: flex-start;
+  }
 
-    .nav-links a i {
-        display: none;
-    }
+  .nav-links a i {
+    display: none;
+  }
 
-    .nav-links a .label {
-        display: inline;
-    }
+  .nav-links a .label {
+    display: inline;
+  }
 }
 
 
@@ -135,6 +154,8 @@ body {
 .login-wrapper {
   display: flex;
   justify-content: center;
+  justify-content: flex-start;
+  /* Posisi gambar di kiri */
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -230,7 +251,8 @@ body {
   }
 
   .image-section {
-    order: -1; /* Gambar akan muncul di atas form */
+    order: -1;
+    /* Gambar akan muncul di atas form */
   }
 
   .image-section img {
@@ -312,7 +334,8 @@ body {
 
 /* Menyesuaikan gambar sebelah kiri */
 .login-wrapper {
-  flex-direction: row; /* Gambar di sebelah kiri dan form di kanan */
+  flex-direction: row;
+  /* Gambar di sebelah kiri dan form di kanan */
 }
 
 .nav-icons {
@@ -404,3 +427,18 @@ body {
   }
 }
 
+.brand-name,
+.login-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+body,
+.input-box,
+.login-button,
+.signup-text,
+.nav-links a,
+.nav-icon {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}

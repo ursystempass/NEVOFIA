@@ -1,30 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Page Loaded Successfully");
 
-    // Animasi muncul untuk .best-product
-    const bestProduct = document.querySelector(".best-product");
-    function handleScroll() {
-        if (!bestProduct) return;
-        const rect = bestProduct.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        if (rect.top < windowHeight - 150) {
-            bestProduct.classList.add("show");
-        }
-    }
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Panggil sekali saat halaman dimuat
+    // HAMBURGER MENU
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
 
-    // Pastikan semua gambar dimuat untuk best-product
-    const productImages = document.querySelectorAll(".product-item img");
-    productImages.forEach(img => {
-        img.addEventListener("error", function () {
-            console.error("Gambar tidak ditemukan:", img.src);
-            img.style.display = "none"; // Sembunyikan jika tidak bisa dimuat
-        });
+    hamburger.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
     });
 
-    // Animasi muncul untuk .top-brand
+    // TOP BRAND
     const topBrand = document.querySelector(".top-brand");
     function handleBrandScroll() {
         if (!topBrand) return;
@@ -35,28 +20,37 @@ document.addEventListener("DOMContentLoaded", function () {
             topBrand.classList.add("show");
         }
     }
-    window.addEventListener("scroll", handleBrandScroll);
-    handleBrandScroll(); // Panggil sekali saat halaman dimuat
 
-    // Pastikan semua gambar dimuat untuk top-brand
+    // BEST PRODUCT
+    const bestProduct = document.querySelector(".best-product");
+    function handleBestProductScroll() {
+        if (!bestProduct) return;
+        const rect = bestProduct.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.top < windowHeight - 150) {
+            bestProduct.classList.add("show");
+        }
+    }
+
+    window.addEventListener("scroll", () => {
+        handleBrandScroll();
+        handleBestProductScroll();
+    });
+
+    handleBrandScroll();
+    handleBestProductScroll();
+
+    // GAMBAR ERROR
     const brandImages = document.querySelectorAll(".brand img");
     brandImages.forEach(img => {
         img.addEventListener("error", function () {
             console.error("Gambar tidak ditemukan:", img.src);
-            img.style.display = "none"; // Sembunyikan jika tidak bisa dimuat
+            img.style.display = "none"; 
         });
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-
-    hamburger.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-    });
-
-    // Customer Review Slider
+    // SLIDER REVIEW
     let index = 0;
     function slideReviews() {
         const slider = document.querySelector(".review-slider");

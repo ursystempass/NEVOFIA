@@ -27,10 +27,10 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
+  font-size: 30px;
 }
 
 .brand-name {
-  font-size: 45px;
   font-weight: bold;
   letter-spacing: 4px;
   color: #803542;
@@ -118,7 +118,7 @@ body {
 
 
 .container {
-    margin-top: 100px;
+    margin-top: 30px;
     max-width: 800px; /* dari 600px ke 800px */
     width: 95%;       /* dari 90% ke 95% */
     background-color: #f2dce2;

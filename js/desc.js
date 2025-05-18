@@ -22,7 +22,46 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.addToBasket = function () {
-    alert(`Berhasil menambahkan ${quantity} item ke keranjang.`);
-    // Logika penyimpanan atau pengiriman ke backend bisa ditambahkan di sini
+  const productTitle = document.querySelector('.product-title').textContent;
+  const priceElement = document.getElementById('product-price');
+  const price = parseFloat(priceElement.dataset.price);
+  const quantity = parseInt(document.getElementById('quantity').textContent);
+
+  // Ambil keranjang dari localStorage atau buat baru
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Cek apakah produk sudah ada di cart
+  const existingItemIndex = cart.findIndex(item => item.title === productTitle);
+
+  if (existingItemIndex !== -1) {
+    // Jika sudah ada, tambahkan quantity-nya
+    cart[existingItemIndex].quantity += quantity;
+  } else {
+    // Jika belum, tambahkan item baru
+    cart.push({
+      title: productTitle,
+      price: price,
+      quantity: quantity,
+    });
+  }
+
+  // Simpan kembali ke localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  alert(`Berhasil menambahkan ${quantity} item "${productTitle}" ke keranjang.`);
   };
 });
+
+function changeImage(imageSrc) {
+  // Ganti gambar utama
+  const mainImage = document.getElementById("productImage");
+  const lipImage = document.getElementById("lipProductImage");
+
+  if (mainImage) {
+    mainImage.src = imageSrc;
+  }
+
+  if (lipImage) {
+    lipImage.src = imageSrc;
+  }
+}

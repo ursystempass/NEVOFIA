@@ -20,10 +20,10 @@
         background-color: transparent;
         position: relative;
         z-index: 1000;
+        font-size: 30px;
     }
 
     .brand-name {
-        font-size: 45px;
         font-weight: bold;
         letter-spacing: 4px;
         color: #803542;
@@ -146,20 +146,23 @@
         border: 10px;
         /* Tambahkan border */
         transition: opacity 0.5s ease-in-out;
+        border-radius: 0px;
     }
 
-    .categories-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
-        max-width: 1000px;
-        margin: 20px auto;
-        gap: 1rem;
-        padding: 1rem 2rem;
-        flex-wrap: nowrap;
-        /* penting agar tidak patah ke bawah */
-    }
+   .categories-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    flex-wrap: nowrap;
+    position: relative; /* tambahkan ini */
+        top: -7px;        /* ini baru akan berfungsi */
+}
+
 
     /* Responsive Categories */
     .categories {
@@ -213,6 +216,8 @@
         margin: 0 auto;
         display: flex;
         gap: 0.5rem;
+        position: relative; /* tambahkan ini */
+        top: -7px;          /* ini baru akan berfungsi */
     }
 
     .search-container input {

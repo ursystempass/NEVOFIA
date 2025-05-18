@@ -19,10 +19,10 @@
         padding: 10px 20px;
         background-color: transparent;
         position: relative;
+        font-size: 30px;
     }
 
     .brand-name {
-        font-size: 45px;
         font-weight: bold;
         letter-spacing: 4px;
         color: #803542;
@@ -166,6 +166,8 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         width: 100%;
+        position: relative;
+        top: -65px;
     }
 
     .product {
@@ -274,6 +276,8 @@
         padding: 20px;
         /* background-color: #fff; */
         text-align: center;
+        position: relative;
+        top: -150px;
     }
 
     .see-also h3 {

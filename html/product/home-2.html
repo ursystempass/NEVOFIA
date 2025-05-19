@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NÉVOFIA</title>
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/NEVOFIA/css/desc.css" />
+    <script defer src="/NEVOFIA/js/desc.js"></script>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar">
+        <a href="/NEVOFIA/html/home.html" class="brand-name">NÉVOFIA</a>
+        <div class="nav-links" id="navLinks">
+          <a href="/NEVOFIA/html/basket.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="label">Cart</span>
+          </a>
+          <a href="/NEVOFIA/html/about.html">
+            <i class="fa-regular fa-address-card"></i>
+            <span class="label">About Us</span>
+          </a>
+          <a href="/NEVOFIA/html/contact.html">
+            <i class="fa-regular fa-envelope"></i>
+            <span class="label">Contact Us</span>
+          </a>
+        </div>
+        <button class="hamburger" id="hamburger">☰</button>
+      </nav>
+      <div class="search-wrapper">
+        <div class="search-container"> 
+          <input type="text" placeholder="Cari produk..." />
+          <button class="search-btn">Cari</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-container">
+        <div class="product-image-gallery">
+          <div class="product-image-box">
+            <img
+              id="productImage"
+              src="/NEVOFIA/project-folder/image/produk2.webp"
+              alt="Product Image"
+            />
+          </div>
+          <div class="product-gallery">
+            <img src="/NEVOFIA/project-folder/image/produk2.webp" onclick="changeImage('/NEVOFIA/project-folder/image/produk2.webp')" />
+            <img src="/NEVOFIA/project-folder/image/pinkflash2.webp" onclick="changeImage('/NEVOFIA/project-folder/image/pinkflash2.webp')" />
+            <img src="/NEVOFIA/project-folder/image/pinkflash3.webp" onclick="changeImage('/NEVOFIA/project-folder/image/pinkflash3.webp')" />
+          </div>
+
+        </div>
+        <div class="product-info">
+          <p class="product-category">Eyeshadow</p>
+          <h2 class="product-title">INKFLASH 3 Shades Eyeshadow Palette Giltter High Pigment Easy To Blend Lasting</h2>
+          <p class="product-description">
+            ✨ Eyeshadow Palette terbaru dari PINKFLASH bertema permainan warna ✨
+          </p>
+          <div class="product-price-container">
+            <span class="product-price" id="product-price" data-price="45.900"
+              >Rp45.900</span
+            >
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="decreaseQuantity()">-</button>
+              <span id="quantity">1</span>
+              <button class="qty-btn" onclick="increaseQuantity()">+</button>
+            </div>
+          </div>
+          <button class="add-to-basket" onclick="addToBasket()">
+            ADD TO CART →
+          </button>
+        </div>
+      </section>
+
+      <section class="lip-product">
+        <img
+          id="lipProductImage"
+          src="/NEVOFIA/project-folder/image/brand pinkflash.webp"
+          alt="Lip Product"
+        />
+      </section>
+      <section class="product-detail">
+        <div class="specs">
+          <h3>Spesifikasi Produk</h3>
+          <ul>
+            <li>
+              <span style="user-select: none; color: #807c7c;">Merek</span>
+              <span style="user-select: text; color: #000;">Pinkflash</span>
+            </li>
+            <li>
+              <span style="user-select: none; color: #807c7c;">Formulasi</span>
+              <span style="user-select: text; color: #000;">Padat</span>
+            </li>
+            <li>
+              <span style="user-select: none; color: #807c7c;">Volume</span>
+              <span style="user-select: text; color: #000;">30ml</span>
+            </li>
+            <li>
+              <span style="user-select: none; color: #807c7c;">Masa Penyimpanan</span>
+              <span style="user-select: text; color: #000;">24 Bulan</span>
+            </li>
+            <li>
+              <span style="user-select: none; color: #807c7c;">Stok</span>
+              <span style="user-select: text; color: #000;">678785</span>
+            </li>
+          </ul> 
+        </div>
+        <div class="description">
+          <h3>Deskripsi Produk</h3>
+          <p>
+            Cara Penggunaan:<br>
+            Aplikasikan menggunakan kuas eyeshadow favoritmu. Kuas yang datar dan tegas akan memberikan pigmentasi yang kuat. Kuas yang lebih lembut dan berisi, cocok untuk membaurkan. Gunakan kuas bersudut kecil untuk mengaplikasikan eyeliner.<br>
+            TIPS: Glitter dapat langsung diaplikasikan dengan jari, tidak perlu kuas. 
+          </p>
+          <p>
+            ⭐Pigmentasi Tinggi<br>
+            ⭐Mudah dibaurkan<br>
+            ⭐Tekstur selembut sutra<br>
+            ⭐Bubuk halus<br>
+            ⭐Tahan lama<br>
+            ⭐Tahan air<br>
+            ⭐Tidak retak<br>
+          </p>
+        </div>
+      </section>
+
+      <section class="see-also">
+        <h3>SEE ALSO</h3>
+        <div class="related-products">
+          <img
+            src="/NEVOFIA/project-folder/image/produk4.webp"
+            alt="Related Product 1"
+          />
+          <img
+            src="/NEVOFIA/project-folder/image/produk1.webp"
+            alt="Related Product 2"
+          />
+          <img
+            src="/NEVOFIA/project-folder/image/produk3.webp"
+            alt="Related Product 3"
+          />
+        </div>
+        <div class="see-more-container">
+          <a href="/NEVOFIA/html/makeup.html" class="see-more-btn"
+            >Lihat Selengkapnya</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

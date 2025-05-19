@@ -149,19 +149,21 @@
         border-radius: 0px;
     }
 
-   .categories-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    flex-wrap: nowrap;
-    position: relative; /* tambahkan ini */
-        top: -7px;        /* ini baru akan berfungsi */
-}
+    .categories-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1000px;
+        margin: 20px auto;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        flex-wrap: nowrap;
+        position: relative;
+        /* tambahkan ini */
+        top: -7px;
+        /* ini baru akan berfungsi */
+    }
 
 
     /* Responsive Categories */
@@ -216,8 +218,10 @@
         margin: 0 auto;
         display: flex;
         gap: 0.5rem;
-        position: relative; /* tambahkan ini */
-        top: -7px;          /* ini baru akan berfungsi */
+        position: relative;
+        /* tambahkan ini */
+        top: -7px;
+        /* ini baru akan berfungsi */
     }
 
     .search-container input {
@@ -259,6 +263,7 @@
         background-color: #fbd3da;
         border-radius: 20px;
         padding: 1rem;
+        cursor: pointer;
         text-align: center;
         box-shadow: 0 4px 12px rgba(128, 53, 66, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;

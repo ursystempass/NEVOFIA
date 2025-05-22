@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NÉVOFIA</title>
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/NEVOFIA/css/desc.css" />
+    <script defer src="/NEVOFIA/js/desc.js"></script>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar">
+        <a href="/NEVOFIA/html/home.html" class="brand-name">NÉVOFIA</a>
+        <div class="nav-links" id="navLinks">
+          <a href="/NEVOFIA/html/basket.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="label">Cart</span>
+          </a>
+          <a href="/NEVOFIA/html/about.html">
+            <i class="fa-regular fa-address-card"></i>
+            <span class="label">About Us</span>
+          </a>
+          <a href="/NEVOFIA/html/contact.html">
+            <i class="fa-regular fa-envelope"></i>
+            <span class="label">Contact Us</span>
+          </a>
+        </div>
+        <button class="hamburger" id="hamburger">☰</button>
+      </nav>
+      <div class="search-wrapper">
+        <div class="search-container"> 
+          <input type="text" placeholder="Cari produk..." />
+          <button class="search-btn">Cari</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-container">
+        <div class="product-image-gallery">
+          <div class="product-image-box">
+            <img
+              id="productImage"
+              src="/NEVOFIA/project-folder/image/skintific1.webp"
+              alt="Product Image"
+            />
+          </div>
+          <div class="product-gallery">
+            <img src="/NEVOFIA/project-folder/image/skintific1.webp" onclick="changeImage('/NEVOFIA/project-folder/image/skintific1.webp')" />
+            <img src="/NEVOFIA/project-folder/image/skintific2.webp" onclick="changeImage('/NEVOFIA/project-folder/image/skintific2.webp')" />
+            <img src="/NEVOFIA/project-folder/image/skintific3.webp" onclick="changeImage('/NEVOFIA/project-folder/image/skintific3.webp')" />
+          </div>
+
+        </div>
+        <div class="product-info">
+          <p class="product-category">Skincare</p>
+          <h2 class="product-title">SKINTIFIC - All Day Light Sunscreen Mist SPF 50 PA++++ 120ml</h2>
+          <p class="product-description">
+            ✨ Sunscreen Spray UV Mist Tone Up Sun Shield ✨
+          </p>
+          <div class="product-price-container">
+            <span class="product-price" id="product-price" data-price="73.900"
+              >Rp73.900</span
+            >
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="decreaseQuantity()">-</button>
+              <span id="quantity">1</span>
+              <button class="qty-btn" onclick="increaseQuantity()">+</button>
+            </div>
+          </div>
+          <button class="add-to-basket" onclick="addToBasket()">
+            ADD TO CART →
+          </button>
+        </div>
+      </section>
+
+      <section class="lip-product">
+        <img
+          id="lipProductImage"
+          src="/NEVOFIA/project-folder/image/brand skintific.webp"
+          alt="Lip Product"
+        />
+      </section>
+      <section class="product-detail">
+        <div class="specs">
+          <h3>Spesifikasi Produk</h3>
+          <ul>
+            <li>
+              <span style="user-select: none; color: #807c7c;">Merek</span>
+              <span style="user-select: text; color: #000;">Skintific</span>
+            </li>
+            <li>
+              <span style="user-select: none; color: #807c7c;">Jenis Kulit</span>
+              <span style="user-select: text; color: #000;">Semua Jenis Kulit, Kulit Kombinasi</span>
+            </li>
+            <li>
+              <span style="user-select: none; color: #807c7c;">Berat Produk</span>
+              <span style="user-select: text; color: #000;">100g</span>
+            </li>
+            <li>
+              <span style="user-select: none; color: #807c7c;">Masa Penyimpanan</span>
+              <span style="user-select: text; color: #000;">24 Bulan</span>
+            </li>
+            <li>
+              <span style="user-select: none; color: #807c7c;">Stok</span>
+              <span style="user-select: text; color: #000;">123105</span>
+            </li>
+          </ul> 
+        </div>
+        <div class="description">
+          <h3>Deskripsi Produk</h3>
+          <p>
+            Skintific All Day Light Sunscreen Mist<br>
+            Sunscreen mist dengan 0.01nm spray yang halus, mudah dibawa dan tidak merusak makeup pada saat diaplikasikan. 
+            Tekstur yang invisible, tidak terasa berat dan menyegarkan kulit. Memberikan rasa segar pada kulit saat digunakan. 
+            Perlindungan maksimal dengan SPF 50+ PA++++, 12 jam melindungi dari UVB penyebab sunburn dan 16 x menangkal UVA untuk mencegah tanda penuaan akibat paparan sinar matahari. 
+            Teknologi mikrokapsul, memberikan 0.04nm lapisan pelindung transparan pada kulit wajah. Dilengkapi 5X bahan efektif termasuk UV Pearls, Ceramide dan Centella yang melindungi 99% dari bahaya sinar UV, 
+            tanda penuaan serta kulit terbakar matahari. <br><br>
+            Manfaat<br>
+            1. Melindungi kulit dari paparan UVA UVB <br>
+            2. Memproteksi tanpa rasa greasy dan tanpa merusak makeup<br>
+            3. Menjadikan kulit terasa segar setelah diaplikasikan<br>
+            4. Menangkal sunburn dan mencegah tanda penuaan<br>
+            5. Tanpa whitecast dan travel-friendly<br>
+        </div>
+      </section>
+
+      <section class="see-also">
+        <h3>SEE ALSO</h3>
+        <div class="related-products">
+          <img
+            src="/NEVOFIA/project-folder/image/elformula1.webp"
+            alt="Related Product 1"
+          />
+          <img
+            src="/NEVOFIA/project-folder/image/skintific4.webp"
+            alt="Related Product 2"
+          />
+          <img
+            src="/NEVOFIA/project-folder/image/theOriginote1.webp"
+            alt="Related Product 3"
+          />
+        </div>
+        <div class="see-more-container">
+          <a href="/NEVOFIA/html/skincare.html" class="see-more-btn"
+            >Lihat Selengkapnya</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

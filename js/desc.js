@@ -53,15 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function changeImage(imageSrc) {
-  // Ganti gambar utama
+  // Ganti gambar utama saja
   const mainImage = document.getElementById("productImage");
-  const lipImage = document.getElementById("lipProductImage");
 
   if (mainImage) {
     mainImage.src = imageSrc;
-  }
-
-  if (lipImage) {
-    lipImage.src = imageSrc;
   }
 }
